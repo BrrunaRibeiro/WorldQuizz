@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    background: #474747;
+}
+
+#content-container {
+    position: absolute;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    height: 700px;
+    width: 700px;
+    border-radius: 50%;
+    background: #474747;
+    box-shadow: inset 33px 33px 66px #3e3e3e,
+                inset -33px -33px 66px #505050;
+}
+
+#user-input {
+    
+}
