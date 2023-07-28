@@ -43,7 +43,7 @@ li {
     width: 700px;
     border-radius: 50%;
     top: 15%;
-    right: 33%;
+    right: 31%;
     background: #474747;
     box-shadow: inset 33px 33px 66px #3e3e3e,
                 inset -33px -33px 66px #505050;
@@ -53,3 +53,31 @@ li {
     color: #ffffff;
     position: absolute;
 }
+input, button {
+    border-radius: 15px;
+    height: 30px;
+    width: 80%;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+    line-height:;
+}
+
+#start, #tutorial {
+    padding: 5px;
+    border-radius: 10px;
+    height: 50px;
+
+}
+#start {
+    color: #ffffff;
+}
+
+#tutorial { 
+    width: 60%;
+    margin: 0 40px 0 40px;
+}
+
+input[type="range"] {
+    cursor: pointer;
+  }
