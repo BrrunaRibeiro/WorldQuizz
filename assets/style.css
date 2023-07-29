@@ -24,11 +24,13 @@ li {
     padding: 50px 100px 10px 100px;
     text-decoration: none;
     list-style: none;
+    letter-spacing: 2px;
+
 }
 
 #logo {
     font-weight: 600;
-    font-size: 26px;
+    font-size: 27px;
     padding-top: 40px;
 }
 
@@ -52,26 +54,72 @@ li {
 #user-input {
     color: #ffffff;
     position: absolute;
+    text-align: center;
 }
 input, button {
-    border-radius: 15px;
+    border-radius: 28px;
     height: 30px;
     width: 80%;
     padding: 5px;
     margin: 10px;
     text-align: center;
-    line-height:;
+    color: #ffffff;
+    font-size: 17px;
+    border: solid 1px rgb(172, 172, 172);
 }
 
+
 #start, #tutorial {
+    color: #ffffffb4;
     padding: 5px;
     border-radius: 10px;
     height: 50px;
+    border: solid 1px #3f3f3f;
+    box-shadow: inset 33px 33px 66px #3e3e3e,
+                inset -33px -33px 66px #505050;
 
 }
+
+
 #start {
     color: #ffffff;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-family: 'Mulish';
 }
+#start:hover {
+    transform: translateY(1px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+   }
+   
+   #start:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   }
+   
+   #start::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 28px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+   }
+   
+   #start::after {
+    background-color: rgb(39, 39, 39);
+   }
+   
+   #start:hover::after {
+    transform: scaleX(1.1) scaleY(1.2);
+    opacity: 0;
+   }
 
 #tutorial { 
     width: 60%;
