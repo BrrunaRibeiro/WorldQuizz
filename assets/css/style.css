@@ -51,6 +51,17 @@ li {
                 inset -33px -33px 66px #505050;
 }
 
+#countdown-container {
+    bottom: 29%;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #797878;
+    color: #ffffff;
+    left: 39%;
+}
+
 #user-input {
     color: #ffffff;
     position: absolute;
@@ -80,7 +91,6 @@ input, button {
 
 }
 
-
 #start {
     color: #ffffff;
     font-size: 22px;
@@ -89,6 +99,7 @@ input, button {
     text-transform: uppercase;
     font-family: 'Mulish';
 }
+
 #start:hover {
     transform: translateY(1px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -99,19 +110,7 @@ input, button {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
    }
    
-   #start::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 28px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-   }
-   
+
    #start::after {
     background-color: rgb(39, 39, 39);
    }
