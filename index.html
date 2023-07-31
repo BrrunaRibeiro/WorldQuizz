@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,29 +10,38 @@
     <title>Quizz!</title>
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <nav>
             <ul>
                 <li href="">Back</li>
-                <li id="logo" href="index.html">Quizz!</li>
+                <li class="logo"><a href="index.html" class="logo">World Quizz</a></li>
                 <li href="index.html">Exit</li>
             </ul>
         </nav>
     </header>
-<div id="content-container">
-    <div id="countdown-container-index"><span max="10" id="countdown-timer"></span></div>
-    <form method="" action="" id="user-input" >
-        <input id="name" type="text" placeholder="Name">
+    <div id="input" class="container">
+        <form method="" id="user-input">
+            <input id="name" type="text" placeholder="Name">
+            <br>
+            <input id="age" type="number" placeholder="Age">
+            <br>
+            <br>
+            <input id="tutorial" data-type="tutorial" value="Tutorial">
+            <br>
+            <input id="start" type="submit" data-type="start" value="Start">
+        </form>
+    </div>
+    <div id="qanda" class="container hide"><span max="10" id="countdown-timer"></span>
+        <p id="question"></p>
+        <div id="optionA" class="options"></div>
+        <div id="optionB" class="options"></div>
+        <div id="optionC" class="options"></div>
         <br>
-        <input id="age" type="number" placeholder="Age">
-        <br>
-        <br>
-        <button id="tutorial" data-type="tutorial">Tutorial</button>
-        <br>
-        <button id="start" data-type="start" href="play.html">Start</button>
-    </form>
-</div>
+        <button id="confirm">Confirm</button>
+    </div>
     <script src="assets/js/script.js" type="text/javascript"></script>
 </body>
+
 </html>

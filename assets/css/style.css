@@ -21,20 +21,23 @@ nav > ul {
 }
 
 li {
-    padding: 50px 100px 10px 100px;
+    padding: 50px 80px 10px 80px;
     text-decoration: none;
     list-style: none;
     letter-spacing: 2px;
-
 }
 
-#logo {
+.logo {
     font-weight: 600;
     font-size: 27px;
     padding-top: 40px;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
-#content-container {
+.container {
     position: absolute;
     display: inline-flex;
     flex-direction: column;
@@ -51,18 +54,25 @@ li {
                 inset -33px -33px 66px #505050;
 }
 
-#countdown-container {
+input {
     bottom: 29%;
     position: relative;
     height: 150px;
     width: 150px;
     border-radius: 50%;
-    background-color: #797878;
+    background-color: #474747;
     color: #ffffff;
-    left: 39%;
+}
+input:focus-visible{
+    background-color: -internal-light-dark#474747 #474747;
+    color: #ffffff;
 }
 
-#countdown-container-index {
+input:-internal-autofill-selected{
+    background-color: #474747;
+}
+
+.hide {
     display: none;
 }
 
@@ -90,6 +100,7 @@ input, button {
 
 
 #start, #tutorial {
+    cursor: default;
     color: #ffffffb4;
     padding: 5px;
     border-radius: 10px;
@@ -99,7 +110,10 @@ input, button {
                 inset -33px -33px 66px #505050;
 
 }
-
+#tutorial {
+    cursor: help;
+    height: 35px;
+}
 #start {
     color: #ffffff;
     font-size: 22px;

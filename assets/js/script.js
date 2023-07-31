@@ -6,6 +6,29 @@ document.addEventListener("DOMContentLoaded", function() {
 const countdownTimer = document.getElementById("countdown-timer");
 const tutorialButton = document.getElementById("tutorial");
 const startButton = document.getElementById("start");
+const div = getElementsByTagName("div");
+
+//Add object with all questions and answers
+const question = [
+      {
+        question: "Which country is famous for the ancient pyramids?",
+        options: {
+          optionA: "Greece",
+          optionB: "Egypt",
+          optionC: "Mexico"
+        },
+        correctAnswer: "Egypt"
+      },
+      {
+        question: "In which city is the iconic Eiffel Tower located?",
+        options: {
+          optionA: "Barcelona",
+          optionB: "Rome",
+          optionC: "Paris"
+        },
+        correctAnswer: "Paris"
+      }
+    ]
 
 //Add event listeners
 startButton.addEventListener("click", startGame);
@@ -17,16 +40,16 @@ var userAge = document.getElementById("age").value;
 
 
 //Start Tutorial Function
-function runTutorial () {
- //Add image/photo or video with instrctions
+function startTutorial () {
+ //Add image/photo with instructions
  //Add Start button to start the quiz from the tutorial as well
 }
 
 //Display question and asnwer options Funtion
 function showQuestion() {
-    document.getElementById("question").innerText = questionData.question;
+    document.getElementById("question").innerText = question[0].question;
     document.getElementById("optionA").innerText = questionData.options.optionA;
-    //Check if this is correct/works and do for B and C too if yes.
+    console.log(question[0].question);
 }
 
 //Timer countdown Function
@@ -48,9 +71,9 @@ function timer() {
 function checkAnswer() {
     if (options === correctAnswer) {
             answeredCorrectly = True;
-    } else ( options !== correctAnswer) {
-        answweredCorrectly = False;
-    }
+    } else {
+        answeredCorrectly = False;
+    }    
 }
 
 //Submit selected answer Funtion
@@ -63,9 +86,7 @@ function submitAnswer() {
 //Score update Funtion based on AsnweredCorrectly being True or False Funtion
 function updateScore() {
     if (answeredCorrectly == True) {
-        score=++
-    } else (asnweredCorrectly === False) {
-        score;
+        score++
     }
 }
 
@@ -83,11 +104,10 @@ function exit() {
 //Start game
 function startGame() {
     if (userName || userAge) {
-        runGame(); {
-            //Make HTML href of the element work and go to play.html
-        }
-        //OR run timer fuction + show question funtion??
-    } else (!userName || !userAge); {
+        div.classList.remove("hide");
+        showQuestion();        
+        } else (!userName || !userAge); {
         alert("Please enter your Name and Age.");
         return;
+        }
 }
