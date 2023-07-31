@@ -66,6 +66,10 @@ li {
     display: none;
 }
 
+#countdown-timer {
+    color: #ffffff;
+    text-align: center;
+}
 
 #user-input {
     color: #ffffff;
