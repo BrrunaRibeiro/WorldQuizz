@@ -4,13 +4,10 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function() {
             if(this.getAttribute("data-type") === "tutorial") {
                 alert("You clicked TUTORIAL!");
-            } else {
-                if(this.getAttribute("data-type") === "start") {
-                    alert("You clicked Start");
-                }
             }
             })
-    }    
+    }  
+
 })
 
 //Assign const var to main elements(Timer, Tutorial button and Start button)
@@ -22,10 +19,21 @@ const startButton = document.getElementById("start");
 startButton.addEventListener("click", startGame);
 tutorialButton.addEventListener("click", startTutorial);
 
+//User's inputs
+var userName = document.getElementById("name").value;
+var userAge = document.getElementById("age").value;
 
+//Start game
+function startGame () {
+    if (userName || userAge) {
+        runGame ();
+    } else (!userName || !userAge) {
+        alert("Please enter your Name and Age.");
+        return;
+}
 
 function runGame() {
-
+    
 }
 
 function runTutorial () {
