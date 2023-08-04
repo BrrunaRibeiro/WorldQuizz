@@ -54,7 +54,6 @@ li {
     -webkit-text-stroke: 0.5px var(--text-stroke-color);
     }
 
-/* this is the text, when you hover on button */
 .hover-text {
     position: absolute;
     box-sizing: border-box;
@@ -68,29 +67,10 @@ li {
     -webkit-text-stroke: 0.5px var(--animation-color);
 }
 
-/* hover */
 .logo:hover .hover-text {
     width: 100%;
     filter: drop-shadow(0 5px 23px var(--animation-color))
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .container {
     position: absolute;
@@ -106,7 +86,7 @@ li {
     right: 31%;
     background: #474747;
     box-shadow: inset 33px 33px 66px #3e3e3e,
-        inset -33px -33px 66px #505050;
+                inset -33px -33px 66px #505050;
 }
 
 input {
@@ -209,6 +189,3 @@ button {
     margin: 0 40px 0 40px;
 }
 
-input[type="range"] {
-    cursor: pointer;
-}

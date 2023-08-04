@@ -1,18 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
     var div = document.getElementsByTagName("div");
+
 })
 //Assign const var to main elements(Timer, Tutorial button and Start button)
 const countdownTimer = document.getElementById("countdown-timer");
-const tutorialButton = document.getElementById("tutorial");
-const startButton = document.getElementById("start");
-const 
+const tutorialButton = document.getElementById("tutorial")
+    .addEventListener("click", startTutorial);
+const startButton = document.getElementById("start")
+    .addEventListener("click", startGame);
 
-//Add event listeners
-startButton.addEventListener("click", startGame);
-tutorialButton.addEventListener("click", startTutorial);
+
 
 //Add object with all questions and answers
-const question = [
+const questions = [
     {
         question: "Which country is famous for the ancient pyramids?",
         options: {
@@ -54,9 +54,9 @@ function startTutorial() {
 
 //Display question and asnwer options Funtion
 function showQuestion() {
-    document.getElementById("question").innerText = question[0].question;
-    document.getElementById("optionA").innerText = question[0].options.optionA;
-    console.log(question[0].question);
+    questionElement = document.getElementById("question").innerText = questions[0].question;
+    answerButtons = document.getElementById("optionA").innerText = questions[0].options.optionA;
+    console.log(questions[0].question);
 }
 
 //Timer countdown Function
@@ -75,9 +75,12 @@ function timer() {
 }
 
 // Check if awnwer selected is the correct answer Function
-function checkAnswer() {
+
+function checkAnswer(e) {
+    let answerButton
     if (options === correctAnswer) {
         answeredCorrectly = True;
+        button.addEventListener("click", submitAnswer);
     } else {
         answeredCorrectly = False;
     }
@@ -98,14 +101,14 @@ function updateScore() {
 }
 
 //See previous question Funtion
-function back() {
-
-}
+//function back() {
+    //
+//}
 
 //Exit game completely and go back to index.html page function
-function exit() {
+//function exit() {
     //
-}
+//}
 
 
 //Start game
@@ -119,9 +122,10 @@ function startGame() {
         console.log("Name:", userName);
         console.log("Age:", userAge);
     }
-    //qanda.classList.remove("hide");
-    //input.classList.add("hide");
+    qanda.classList.remove("hide");
+    input.classList.add("hide");
     showQuestion();
+    timer();
 
 }
 
