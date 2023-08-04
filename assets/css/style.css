@@ -7,16 +7,22 @@
 }
 
 body {
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    margin: 0;
     font-family: 'Mulish', sans-serif;
     color: #ffffff;
 }
 
-nav, header {
+nav,
+header {
     height: 100px;
     text-align: center;
 }
 
-nav > ul {
+nav>ul {
     display: inline-flex;
 }
 
@@ -51,7 +57,7 @@ li {
     right: 31%;
     background: #474747;
     box-shadow: inset 33px 33px 66px #3e3e3e,
-                inset -33px -33px 66px #505050;
+        inset -33px -33px 66px #505050;
 }
 
 input {
@@ -63,12 +69,13 @@ input {
     background-color: #474747;
     color: #ffffff;
 }
-input:focus-visible{
+
+input:focus-visible {
     background-color: -internal-light-dark#474747 #474747;
     color: #ffffff;
 }
 
-input:-internal-autofill-selected{
+input:-internal-autofill-selected {
     background-color: #474747;
 }
 
@@ -86,7 +93,9 @@ input:-internal-autofill-selected{
     position: absolute;
     text-align: center;
 }
-input, button {
+
+input,
+button {
     border-radius: 28px;
     height: 30px;
     width: 80%;
@@ -99,7 +108,8 @@ input, button {
 }
 
 
-#start, #tutorial {
+#start,
+#tutorial {
     cursor: default;
     color: #ffffffb4;
     padding: 5px;
@@ -107,13 +117,15 @@ input, button {
     height: 50px;
     border: solid 1px #3f3f3f;
     box-shadow: inset 33px 33px 66px #3e3e3e,
-                inset -33px -33px 66px #505050;
+        inset -33px -33px 66px #505050;
 
 }
+
 #tutorial {
     cursor: help;
     height: 35px;
 }
+
 #start {
     color: #ffffff;
     font-size: 22px;
@@ -126,28 +138,28 @@ input, button {
 #start:hover {
     transform: translateY(1px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-   }
-   
-   #start:active {
+}
+
+#start:active {
     transform: translateY(1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-   }
-   
+}
 
-   #start::after {
+
+#start::after {
     background-color: rgb(39, 39, 39);
-   }
-   
-   #start:hover::after {
+}
+
+#start:hover::after {
     transform: scaleX(1.1) scaleY(1.2);
     opacity: 0;
-   }
+}
 
-#tutorial { 
+#tutorial {
     width: 60%;
     margin: 0 40px 0 40px;
 }
 
 input[type="range"] {
     cursor: pointer;
-  }
+}
