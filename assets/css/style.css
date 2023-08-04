@@ -28,20 +28,69 @@ nav>ul {
 
 li {
     padding: 50px 80px 10px 80px;
-    text-decoration: none;
     list-style: none;
     letter-spacing: 2px;
 }
 
-.logo {
-    font-weight: 600;
-    font-size: 27px;
-    padding-top: 40px;
+.nav-menu>a {
     text-decoration: none;
     color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 4px;
 }
+
+.logo {
+    font-weight: 400;
+    font-size: 27px;
+    padding-top: 48px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    background: transparent;
+    --animation-color: #cdcdcd;
+    --fs-size: 19px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: 'Mulish', sans-serif;
+    position: relative;
+    -webkit-text-stroke: 0.5px var(--text-stroke-color);
+    }
+
+/* this is the text, when you hover on button */
+.hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 0.5px var(--animation-color);
+}
+
+/* hover */
+.logo:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 5px 23px var(--animation-color))
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .container {
     position: absolute;

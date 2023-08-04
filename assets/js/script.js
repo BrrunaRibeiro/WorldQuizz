@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const countdownTimer = document.getElementById("countdown-timer");
 const tutorialButton = document.getElementById("tutorial");
 const startButton = document.getElementById("start");
+const 
 
 //Add event listeners
 startButton.addEventListener("click", startGame);
@@ -120,5 +121,7 @@ function startGame() {
     }
     //qanda.classList.remove("hide");
     //input.classList.add("hide");
+    showQuestion();
+
 }
 
