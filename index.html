@@ -9,6 +9,10 @@
     <meta name="keywords" content="quizz, travel, curiosities, grography, fun facts, questions and asnwers, Q&A">
     <title>Quizz!</title>
     <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
@@ -21,19 +25,19 @@
             </ul>
         </nav>
     </header>
-    <div id="input" class="container">
+    <div id="input" class="container hide">
         <form method="" id="user-input">
             <input id="name" type="text" placeholder="Name">
             <br>
             <input id="age" type="number" placeholder="Age">
             <br>
             <br>
-            <input id="tutorial" data-type="tutorial" value="Tutorial">
+            <input id="tutorial" value="Tutorial">
             <br>
-            <input id="start" type="submit" data-type="start" value="Start">
+            <input id="start" type="submit" value="Start">
         </form>
     </div>
-    <div id="qanda" class="container hide"><span max="10" id="countdown-timer"></span>
+    <div id="qanda" class="container"><span max="10" id="countdown-timer"></span>
         <p id="question"></p>
         <div id="optionA" class="options"></div>
         <div id="optionB" class="options"></div>
