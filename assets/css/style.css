@@ -115,6 +115,14 @@ input:-internal-autofill-selected {
 #countdown-timer {
     color: #ffffff;
     text-align: center;
+    height: 10%;
+    width: 10%;
+    border-radius: 50%;
+    background: #505050;
+}
+
+#countdown-timer[class="5left"] {
+    color: red;
 }
 
 #user-input {

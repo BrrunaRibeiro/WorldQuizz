@@ -34,7 +34,13 @@ const questions = [
 
 ]
 
+questionElement = document.getElementById("question").innerText = questions[0].question;
+answerButtons = document.getElementById("answer-buttons");
+nextButton = document.getElementById("next");
+console.log(questions[0].question);
 
+let currentQuestion = 0;
+let score = 0;
 
 //User's inputs(it will be the name will be shown in the Final Score screen)
 function storeInputs() {
@@ -54,9 +60,16 @@ function startTutorial() {
 
 //Display question and asnwer options Funtion
 function showQuestion() {
-    questionElement = document.getElementById("question").innerText = questions[0].question;
-    answerButtons = document.getElementById("optionA").innerText = questions[0].options.optionA;
-    console.log(questions[0].question);
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNumber = currentQuestionIndex + 1;
+    questionsElement.innerHTML = questionNumber + ". " currentQuestion.question;
+
+    currentQuestion.options.forEach(options => {
+        const button = document.createElement("button");
+        button.innerHTML = options.value;
+        button.classList.add("btn");
+        answerButtons.appendChild(button);
+        });
 }
 
 //Timer countdown Function
@@ -72,13 +85,18 @@ function timer() {
             //Go to next question
         }
     }, 1000);
+    if (count < 5) {
+        countdownTimer.classList.add("5left");
+    } else {
+        countdownTimer.classList.remove("5left");
+    }
 }
 
 // Check if awnwer selected is the correct answer Function
 
-function checkAnswer(e) {
+/*function checkAnswer() {
     let answerButton
-    if (options === correctAnswer) {
+    if (options.value === correctAnswer.value) {
         answeredCorrectly = True;
         button.addEventListener("click", submitAnswer);
     } else {
@@ -92,6 +110,7 @@ function submitAnswer() {
         checkAnswer();
     }
 }
+*/
 
 //Score update Funtion based on AsnweredCorrectly being True or False Funtion
 function updateScore() {
@@ -102,13 +121,14 @@ function updateScore() {
 
 //See previous question Funtion
 //function back() {
-    //
+//
 //}
 
 //Exit game completely and go back to index.html page function
 //function exit() {
-    //
+//
 //}
+
 
 
 //Start game
