@@ -18,12 +18,15 @@ body {
 
 nav,
 header {
-    height: 100px;
+    height: 130px;
     text-align: center;
 }
 
 nav>ul {
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 li {
@@ -37,40 +40,26 @@ li {
     color: #ffffff;
 }
 
+#exit {
+    position: relative;
+    bottom: 81px;
+    left: 450px;
+}
+
 .logo {
     font-weight: 400;
-    font-size: 27px;
+    font-size: 22px;
     padding-top: 48px;
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 3.5px;
     background: transparent;
-    --animation-color: #cdcdcd;
-    --fs-size: 19px;
-    text-decoration: none;
-    font-size: var(--fs-size);
-    font-family: 'Mulish', sans-serif;
-    position: relative;
-    -webkit-text-stroke: 0.5px var(--text-stroke-color);
+    
 }
 
-.hover-text {
-    position: absolute;
-    box-sizing: border-box;
-    content: attr(data-text);
-    color: var(--animation-color);
-    width: 0%;
-    inset: 0;
-    border-right: var(--border-right) solid var(--animation-color);
-    overflow: hidden;
-    transition: 0.5s;
-    -webkit-text-stroke: 0.5px var(--animation-color);
-}
-
-.logo:hover .hover-text {
-    width: 100%;
-    filter: drop-shadow(0 5px 23px var(--animation-color))
-}
+.logo:hover {
+    transform: scale(1.02);
+    }
 
 .container {
     position: absolute;
@@ -173,6 +162,7 @@ button {
 #tutorial {
     cursor: help;
     height: 35px;
+    margin: 5px;
 }
 
 #start {
@@ -182,6 +172,7 @@ button {
     letter-spacing: 4px;
     text-transform: uppercase;
     font-family: 'Mulish';
+    margin: 23px;
 }
 
 #start:hover {
@@ -215,6 +206,11 @@ button {
     color: white;
 }
 
+#next:hover {
+    background: #525252;
+    
+}
+
 #questionp {
     padding: 1%;
     background: transparent;
@@ -224,18 +220,23 @@ button {
 
 #answer-buttons {
     text-align: center;
+    width: 100%;
+    background: transparent;
 }
 
-.options {
+.options , .options:autofill {
     position: relative;
     font-size: 16px;
     cursor: auto;
+    width: 50%;
+    
 }
 
 .options:hover {
     background: #707070;
 }
 
-.options::after:active {
+.options:active {
     border: solid 2px;
+    color: red;
 }

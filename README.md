@@ -142,7 +142,7 @@ This is where you will test the user stories you created in the README against y
 
 ### Full Testing
 
-👩🏻‍💻 View an example of a completed full testing section [here](https://github.com/kera-cudmore/TheQuizArms/blob/main/TESTING.md#Full-Testing)
+
 
 Full testing can be tedious, so it is great to try and break this part up into smaller chunks and do a bit at a time. Full testing is when you go through the site and test every single thing that can be tested. So for example you would test that all links in the navbar correctly redirect the user to where there are supposed to go. A table is the perfect way to display this information.
 
@@ -154,7 +154,6 @@ List (or put in a table) all known bugs on your site here as soon as you find th
 
 ### Solved Bugs
 
-👩🏻‍💻View an example of a completed bugs section [here](https://github.com/kera-cudmore/BookWorm/blob/main/TESTING.md#BUGS)
 
 This is where all solved bugs go once squashed. List what the bug was, and how you managed to fix it. You can also include images/videos here if you wanted.
 
