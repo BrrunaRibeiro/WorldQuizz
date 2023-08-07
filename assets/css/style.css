@@ -113,12 +113,17 @@ input:-internal-autofill-selected {
 }
 
 #countdown-timer {
-    color: #ffffff;
+    position: relative;
+    color: #000000;
     text-align: center;
-    height: 10%;
-    width: 10%;
+    padding: 5px;
+    height: 120px;
+    width: 120px;
     border-radius: 50%;
     background: #505050;
+    bottom: 100px;
+    left: 245px;
+    background:rgb(172, 172, 172);
 }
 
 #countdown-timer[class="5left"] {
@@ -197,3 +202,32 @@ button {
     margin: 0 40px 0 40px;
 }
 
+#confirm , #next {
+    width: 15%;
+    background: #747474;
+    color: white;
+}
+
+#question {
+    padding: 1%;
+    background: transparent;
+    position: relative;
+    bottom: 45px;
+}
+
+#answer-buttons {
+    text-align: center;
+}
+
+.options {
+    position: relative;
+    font-size: 16px;
+    cursor: auto;
+}
+
+.options:hover {
+    background: #707070;
+}
+
+.options:active {
+    border: solid 2px;
