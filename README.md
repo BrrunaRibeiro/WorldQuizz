@@ -20,45 +20,45 @@ The Quizz was build to agregate knowledge. You will find the questions easy to a
 
 -__Navigation Bar__
 
-    -Responsive navigation bar featuring a "Back" link, Logo with a link to the Home page and a link to "Exit" the game.
-    -This section will allow the user to navigate through the Quiz easily.
+- Responsive navigation bar featuring a "Back" link, Logo with a link to the Home page and a link to "Exit" the game.
+- This section will allow the user to navigate through the Quiz easily.
 
 ![Navigation Bar]()
 
 -__User Inputs page__
 
-    -The index page consists of a User Input, where the name and age will be validated prior to starting the game.
-    -If both the name and age are provided, you can either start the quizz or see the tutorial with the instructions on how to play.
+- The index page consists of a User Input, where the name and age will be validated prior to starting the game.
+- If both the name and age are provided, you can either start the quizz or see the tutorial with the instructions on how to play.
 
 ![UserInput]()
 
--__Tutorial__
+- __Tutorial__
 
-    -A small but descriptive tutorial with basic instructions has been added to help the First Time User to navigate easily through the Quiz.
+- A small but descriptive tutorial with basic instructions has been added to help the First Time User to navigate easily through the Quiz.
 
 ![Tutorial]()
 
 -__Start Button__
 
-    -This button starts the Quiz after validating the User's Inputs. 
-    -Featuring a :hover animation.
+- This button starts the Quiz after validating the User's Inputs. 
+- Featuring a :hover animation.
 
 ![Start Button :hover]()
 
 -__Question and Answers Section__
 
-    -In this section, the question is presented with 3 options for asnwer. Only one of them is the correct answer.
+- In this section, the question is presented with 3 options for asnwer. Only one of them is the correct answer.
 
 -__Timer__
 
-    -A timer funtion has been added to give the User 10 second to select the correct answer. 
-    -The timer is resetted for each question.
+- A timer funtion has been added to give the User 10 second to select the correct answer. 
+- The timer is resetted for each question.
 
 ![Question and Asnwer options with Timer]()
 
 -__Share__
 
-    -This feature allows the user to share the Quiz link with friends and family.
+- This feature allows the user to share the Quiz link with friends and family.
 
 ![Share Button/Link]()
 
@@ -66,7 +66,7 @@ The Quizz was build to agregate knowledge. You will find the questions easy to a
 
 -__LeaderBoard__
     
-    -This feature will allow the User to see how friends and family scored and display a leaderboard depending on your scores.
+- This feature will allow the User to see how friends and family scored and display a leaderboard depending on your scores.
 
 ##Testing
 
@@ -170,13 +170,13 @@ This is where all solved bugs go once squashed. List what the bug was, and how y
 
 -__WireFrames__
 
-    -Made with "MarvelAp"
-    <iframe src="https://marvelapp.com/prototype/bj49j2h?emb=1&iosapp=false&frameless=false" width="1440" height="1024" allowTransparency="true" frameborder="0" style="-webkit-clip-path: inset(2px 2px); clip-path: inset(2px 2px);"></iframe>
+- Made with "MarvelAp" LINK\
+<iframe src="https://marvelapp.com/prototype/bj49j2h?emb=1&iosapp=false&frameless=false" width="1440" height="1024" allowTransparency="true" frameborder="0" style="-webkit-clip-path: inset(2px 2px); clip-path: inset(2px 2px);"></iframe>
 
 -__Favicon__
     
-    -Made with "FavIcon Generator"
-    https://favicon.io/
+- Made with "FavIcon Generator"
+ https://favicon.io/
 
 
 
