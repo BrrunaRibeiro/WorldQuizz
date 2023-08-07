@@ -7,21 +7,20 @@ document.addEventListener("DOMContentLoaded", function () {
 //Assign const variable to main elements for future use
 const countdownTimer = document.getElementById("countdown-timer");
 const tutorialButton = document.getElementById("tutorial")
-    .addEventListener("click", startTutorial);
+tutorialButton.addEventListener("click", startTutorial);
 const startButton = document.getElementById("start");
 startButton.addEventListener("click", startGame);
-// startButton.onclick = () => {
-//     // qanda.classList.add('active');
-//     // input.classList.remove('active');
-// }
 const nextButton = document.getElementById("next")
 nextButton.addEventListener("click", next);
-const answerButtons = document.getElementById("answer-buttons");
-const btn = document.getElementsByClassName("btn");
+const options = document.querySelector(".options");
+const answerButtons = document.getElementById("answer-buttons")
+answerButtons.addEventListener("click", selectAnswer)
+answerButtons.addEventListener("click", checkAnswer);
+
 const questionp = document.getElementById("questionp");
 let questionCount = 0;
 let score = 0;
-
+let countdownInterval = 10;
 
 //Start Tutorial Function
 function startTutorial() {
@@ -33,7 +32,6 @@ function startTutorial() {
     input.classList.add("hide");
 }
 
-
 //Timer countdown Function
 function timer() {
     let count = 10;
@@ -44,7 +42,7 @@ function timer() {
         if (count === 0) {
             clearInterval(countdownInterval);
             console.log("Time's up!");
-            //what to do when its 0
+            next();
         }
     }, 1000);
     if (count < "5") {
@@ -54,45 +52,57 @@ function timer() {
     }
 }
 
+function selectAnswer() {
+    options.classList.add("answer-active");
+    checkAnswer();
+}
 
-
-
-// Check if awnwer selected is the correct answer Function
-// function checkAnswer() {
-//     for (
-
-//    )  
-//     if (selectedAnswerTOBECREATED === correctAnswer.value) {
-//         answeredCorrectly = True;
-//         //selectedAnswerTOBECREATED becomes Green;
-//         // If confirming button will be used: button.addEventListener("click", submitAnswer);
-//     } else {
-//         answeredCorrectly = False;
-//         //selectedAnswerTOBECREATED becomes Red;
-//         //correctAsnwer becomes green;
-//     }
-// }
-
-/*
-// Loop through the buttons and add the active class to the current/clicked button
-for (var i = 0; i < btn.length; i++) {
-    btns[i].addEventListener("click", function() {
-        var current = document.getElementsByClassName("active");
-
-        // If there's no active class
-        if (current.length > 0) {
-            current[0].className = current[0].className.replace(" active", "");
+//Check if awnwer selected is the correct answer Function
+function checkAnswer() {
+    for (var i = 0; i < answerButtons.length; i++) {
+            answerButtons[i].addEventListener("click", function() {
+                var selectedAnswer = document.getElementsByClassName("answer-active");
+        
+                // If there's no active class
+                if (current.length > 0) {
+                    current[0].className = current[0].className.replace(" answer-active", "");
+                }
+        
+                // Add the active class to the current/clicked button
+                this.className += " answer-active";
+            };
         }
-
-        // Add the active class to the current/clicked button
-        this.className += " active";
-    });
+    // if (selectedAnswerTOBECREATED === correctAnswer.value) {
+    //     answeredCorrectly = True;
+    //     //selectedAnswerTOBECREATED becomes Green;
+    //     // If confirming button will be used: button.addEventListener("click", submitAnswer);
+    // } else {
+    //     answeredCorrectly = False;
+    //     //selectedAnswerTOBECREATED becomes Red;
+    //     //correctAsnwer becomes green;
+    // }
 }
 
 
+// Loop through the buttons and add the active class to the current/clicked button
+// for (var i = 0; i < btn.length; i++) {
+//     answerButtons[i].addEventListener("click", function() {
+//         var current = document.getElementsByClassName("active");
+
+//         // If there's no active class
+//         if (current.length > 0) {
+//             current[0].className = current[0].className.replace(" active", "");
+//         }
+
+//         // Add the active class to the current/clicked button
+//         this.className += " active";
+//     });
+// }
 
 
 
+
+/*
 //Score update Function based on AsnweredCorrectly being True or False
 function updateScore() {
     if (answeredCorrectly == True) {
@@ -116,13 +126,18 @@ function exit() {
      next();
      reset();
 */
+//Reset the 10 second timer for the next question 
+function resetTimer() {
+    clearInterval(countdownInterval);
+    countdownTimer.innerText = 10; 
+}
+
 //When the "Next" button is clicked the questionCount(index) is incremented with the ++ operator, presnting the next question
 function next() {
         questionCount++;
         showQuestion(questionCount);
-        //timer(); RESET
+        resetTimer();
 }
-console.log(nextButton);
 
 //Display question and asnwer options and calls the timer() function
 function showQuestion(index) {
@@ -131,12 +146,10 @@ function showQuestion(index) {
     timer();
 
     questionp.textContent = `${questions[index].question}`;
-
     let optionTag =
         `<div id="answer-buttons"><button id="optionA" class="options btn">${questions[index].options.optionA}</button></div>
     <div id="answer-buttons"><button id="optionA" class="options btn">${questions[index].options.optionB}</button></div>
     <div id="answer-buttons"><button id="optionA" class="options btn">${questions[index].options.optionC}</button></div>`;
-
     answerButtons.innerHTML = optionTag;
 }
 
