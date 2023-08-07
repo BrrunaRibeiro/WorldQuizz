@@ -2,17 +2,25 @@ document.addEventListener("DOMContentLoaded", function () {
     var div = document.getElementsByTagName("div");
 
 })
-//Assign const var to main elements(Timer, Tutorial button, Start button and Next button)
+//Assign const variable to main elements(Timer, Tutorial button, Start button and Next button) for future use
 const countdownTimer = document.getElementById("countdown-timer");
 const tutorialButton = document.getElementById("tutorial")
     .addEventListener("click", startTutorial);
 const startButton = document.getElementById("start");
 startButton.addEventListener("click", startGame);
-const next = document.getElementById("next")
+const nextButton = document.getElementById("next")
     .addEventListener("click", next);
 
 
-//Add object with all questions and answers
+questionElement = document.getElementById("question");
+answerButtons = document.getElementById("answer-buttons");
+
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+
+//Create array with all question objects with nested object with answer options
 const questions = [
     {
         question: "Which country is famous for the ancient pyramids?",
@@ -35,32 +43,12 @@ const questions = [
 
 ]
 
-questionElement = document.getElementById("question")= questions[0].question;
-answerButtons = document.getElementById("answer-buttons");
-console.log(questions[0].question);
-
-let currentQuestion = 0;
-let score = 0;
 
 //Start Tutorial Function
 function startTutorial() {
     //Add image/photo with instructions
     //Add Start button to start the quiz from the tutorial as well
 }
-
-//Display question and asnwer options Funtion
-/*function showQuestion() {
-    let currentQuestion = questions[currentQuestionIndex];
-    let questionNumber = currentQuestionIndex + 1;
-    questionsElement.innerHTML = questionNumber + ". " currentQuestion.question;
-
-    currentQuestion.options.forEach(options => {
-        const button = document.createElement("button");
-        button.innerHTML = options.value; //NOT SURE HOW TO GET EACH OPTION'S VALUE
-        button.classList.add("btn");
-        answerButtons.appendChild(button);
-    });
-}*/
 
 //Timer countdown Function
 function timer() {
@@ -72,7 +60,7 @@ function timer() {
         if (count === 0) {
             clearInterval(countdownInterval);
             console.log("Time's up!");
-            reset();//TO BE CREATED
+            reset();//TO BE CREATED OR NEXT FUNCTION CAN BE USD?
         }
     }, 1000);
     if (count < 5) {
@@ -81,6 +69,9 @@ function timer() {
         countdownTimer.classList.remove("5left");
     }
 }
+
+
+
 
 // Check if awnwer selected is the correct answer Function
 
@@ -109,22 +100,23 @@ function submitAnswer() {
 */
 
 // Get all buttons with class="btn" inside the container
-var btns = answerButtons.getElementsByClassName("btn");
+var btn = answerButtons.getElementsByClassName("btn");
 
-// Loop through the buttons and add the active class to the current/clicked button
-for (var i = 0; i < btn.length; i++) {
-    btns[i].addEventListener("click", function() {
-        var current = document.getElementsByClassName("active");
+// // Loop through the buttons and add the active class to the current/clicked button
 
-        // If there's no active class
-        if (current.length > 0) {
-            current[0].className = current[0].className.replace(" active", "");
-        }
+// for (var i = 0; i < btn.length; i++) {
+//     btns[i].addEventListener("click", function() {
+//         var current = document.getElementsByClassName("active");
 
-        // Add the active class to the current/clicked button
-        this.className += " active";
-    });
-}
+//         // If there's no active class
+//         if (current.length > 0) {
+//             current[0].className = current[0].className.replace(" active", "");
+//         }
+
+//         // Add the active class to the current/clicked button
+//         this.className += " active";
+//     });
+// }
 
 function next() {
 
@@ -150,11 +142,34 @@ function updateScore() {
 //}
 
 
+//Display question and asnwer options Funtion
+function showQuestion() {
+    qanda.classList.toggle("hide");
+    input.classList.add("hide")
+    timer();
+    
+
+    checkAnswer();
+    updateScore();
+    next();
+    reset();
+    let currentQuestion = questions[currentQuestionIndex];
+    questionsElement.innerHTML = currentQuestion.question;
+  /*  let questionNumber = currentQuestionIndex + 1;
+    questionsElement.innerHTML = questionNumber + ". " currentQuestion.question;
+
+    currentQuestion.options.forEach(options => {
+        const button = document.createElement("button");
+        button.innerHTML = options.value; //NOT SURE HOW TO GET EACH OPTION'S VALUE
+        button.classList.add("btn");
+        answerButtons.appendChild(button);
+    });*/
+}
 
 //Start game
 function startGame() {
-    var userName = document.getElementById("name").value;
-    var userAge = document.getElementById("age").value;
+    let userName = document.getElementById("name").value;
+    let userAge = document.getElementById("age").value;
     if (!userName && !userAge) {
         alert("Please enter your Name and Age.");
         return;
@@ -162,14 +177,12 @@ function startGame() {
         console.log("Name:", userName);
         console.log("Age:", userAge);
     };
-
-    qanda.classList.remove("hide");
-    input.classList.add("hide");
+    
+    currentQuestionIndex = 0;
+    score = 0;
+    let isShow = true;
+    //HERE SHOULD HAVE: next.innerHTML = "Next";
     showQuestion();
-    timer();
-    checkAnswer();
-    updateScore();
-    next();
-    reset();
+    
 }
 
