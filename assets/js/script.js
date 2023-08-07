@@ -1,24 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
     var div = document.getElementsByTagName("div");
-
 })
-//Assign const variable to main elements(Timer, Tutorial button, Start button and Next button) for future use
+
+//Assign const variable to main elements for future use
 const countdownTimer = document.getElementById("countdown-timer");
 const tutorialButton = document.getElementById("tutorial")
     .addEventListener("click", startTutorial);
 const startButton = document.getElementById("start");
 startButton.addEventListener("click", startGame);
-const nextButton = document.getElementById("next")
-    .addEventListener("click", next);
-
-
-questionElement = document.getElementById("question");
+// startButton.onclick = () => {
+//     // qanda.classList.add('active');
+//     // input.classList.remove('active');
+// }
+const nextButton = document.getElementById("next");
 answerButtons = document.getElementById("answer-buttons");
 
 
-let currentQuestionIndex = 0;
 let score = 0;
-
 
 //Create array with all question objects with nested object with answer options
 const questions = [
@@ -119,7 +117,9 @@ var btn = answerButtons.getElementsByClassName("btn");
 // }
 
 function next() {
-
+    nextButton.onClick = () => {
+        currentQuestion++;
+    }
 }
 
 
@@ -143,18 +143,22 @@ function updateScore() {
 
 
 //Display question and asnwer options Funtion
-function showQuestion() {
-    qanda.classList.toggle("hide");
-    input.classList.add("hide")
+function showQuestion(index) {
+    qanda.classList.remove("hide");
+    input.classList.add("hide");
     timer();
-    
 
-    checkAnswer();
-    updateScore();
-    next();
-    reset();
-    let currentQuestion = questions[currentQuestionIndex];
-    questionsElement.innerHTML = currentQuestion.question;
+    const currentQuestion = document.querySelector('#questionp');
+    questionp.textContent = `${questions[index].question}`;
+
+    
+}
+    // checkAnswer();
+    // updateScore();
+    // next();
+    // reset();
+
+
   /*  let questionNumber = currentQuestionIndex + 1;
     questionsElement.innerHTML = questionNumber + ". " currentQuestion.question;
 
@@ -164,7 +168,7 @@ function showQuestion() {
         button.classList.add("btn");
         answerButtons.appendChild(button);
     });*/
-}
+
 
 //Start game
 function startGame() {
@@ -180,9 +184,8 @@ function startGame() {
     
     currentQuestionIndex = 0;
     score = 0;
-    let isShow = true;
     //HERE SHOULD HAVE: next.innerHTML = "Next";
-    showQuestion();
-    
+    showQuestion(1);
+
 }
 

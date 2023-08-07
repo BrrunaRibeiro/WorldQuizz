@@ -52,7 +52,7 @@ li {
     font-family: 'Mulish', sans-serif;
     position: relative;
     -webkit-text-stroke: 0.5px var(--text-stroke-color);
-    }
+}
 
 .hover-text {
     position: absolute;
@@ -87,7 +87,7 @@ li {
     transform: translate(-50%, -50%);
     background: #474747;
     box-shadow: inset 33px 33px 66px #3e3e3e,
-                inset -33px -33px 66px #505050;
+        inset -33px -33px 66px #505050;
 }
 
 input {
@@ -124,7 +124,7 @@ input:-internal-autofill-selected {
     background: #505050;
     bottom: 100px;
     left: 245px;
-    background:rgb(172, 172, 172);
+    background: rgb(172, 172, 172);
 }
 
 #countdown-timer[class="5left"] {
@@ -161,7 +161,6 @@ button {
     border: solid 1px #3f3f3f;
     box-shadow: inset 33px 33px 66px #3e3e3e,
         inset -33px -33px 66px #505050;
-
 }
 
 #tutorial {
@@ -203,7 +202,8 @@ button {
     margin: 0 40px 0 40px;
 }
 
-#confirm , #next {
+#confirm,
+#next {
     width: 15%;
     background: #747474;
     color: white;
@@ -230,5 +230,6 @@ button {
     background: #707070;
 }
 
-.options:active {
+.options::after:active {
     border: solid 2px;
+}
