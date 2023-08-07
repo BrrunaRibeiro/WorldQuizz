@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var div = document.getElementsByTagName("div");
+    const div = document.getElementsByTagName("div");
+    const button = document.getElementsByTagName("button");
 })
 
 //Assign const variable to main elements for future use
@@ -13,7 +14,7 @@ startButton.addEventListener("click", startGame);
 //     // input.classList.remove('active');
 // }
 const nextButton = document.getElementById("next");
-answerButtons = document.getElementById("answer-buttons");
+const answerButtons = document.getElementById("answer-buttons");
 
 
 let score = 0;
@@ -58,10 +59,10 @@ function timer() {
         if (count === 0) {
             clearInterval(countdownInterval);
             console.log("Time's up!");
-            reset();//TO BE CREATED OR NEXT FUNCTION CAN BE USD?
+            next();
         }
     }, 1000);
-    if (count < 5) {
+    if (countdownTimer <= 5) {
         countdownTimer.classList.add("5left");
     } else {
         countdownTimer.classList.remove("5left");
@@ -116,11 +117,7 @@ var btn = answerButtons.getElementsByClassName("btn");
 //     });
 // }
 
-function next() {
-    nextButton.onClick = () => {
-        currentQuestion++;
-    }
-}
+
 
 
 
@@ -141,6 +138,13 @@ function updateScore() {
 //
 //}
 
+//When the "Next" button is clicked the currentQuestion is incremented with the ++ operator
+function next() {
+    nextButton.onclick = () => {
+        questionCount++;
+        showQuestions(questionCount);
+    }
+}
 
 //Display question and asnwer options Funtion
 function showQuestion(index) {
@@ -151,7 +155,12 @@ function showQuestion(index) {
     const currentQuestion = document.querySelector('#questionp');
     questionp.textContent = `${questions[index].question}`;
 
-    
+    let optionTag = 
+   `<div id="answer-buttons"><button id="optionA" class="options btn">${questions[index].options.optionA}</button></div>
+    <div id="answer-buttons"><button id="optionA" class="options btn">${questions[index].options.optionB}</button></div>
+    <div id="answer-buttons"><button id="optionA" class="options btn">${questions[index].options.optionC}</button></div>`;
+
+    answerButtons.innerHTML = optionTag;
 }
     // checkAnswer();
     // updateScore();
