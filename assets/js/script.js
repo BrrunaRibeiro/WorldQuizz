@@ -4,6 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const button = document.getElementsByTagName("button");
 })
 
+const questionp = document.getElementById("questionp");
+let questionCount = 0;
+let score = 0;
+let countdownInterval = 10;
+let selectedAnswer;
+
 //Assign const variable to main elements for future use
 const countdownTimer = document.getElementById("countdown-timer");
 const tutorialButton = document.getElementById("tutorial")
@@ -12,15 +18,9 @@ const startButton = document.getElementById("start");
 startButton.addEventListener("click", startGame);
 const nextButton = document.getElementById("next")
 nextButton.addEventListener("click", next);
-const options = document.querySelector(".options");
-const answerButtons = document.getElementById("answer-buttons")
-answerButtons.addEventListener("click", selectAnswer)
-answerButtons.addEventListener("click", checkAnswer);
+const options = document.querySelector("#options");
+const answerButtons = document.querySelector(".btn");
 
-const questionp = document.getElementById("questionp");
-let questionCount = 0;
-let score = 0;
-let countdownInterval = 10;
 
 //Start Tutorial Function
 function startTutorial() {
@@ -45,43 +45,46 @@ function timer() {
             next();
         }
     }, 1000);
-    if (count < "5") {
-        countdownTimer.classList.add("5left");
-    } else {
-        countdownTimer.classList.remove("5left");
-    }
 }
 
-function selectAnswer() {
-    options.classList.add("answer-active");
+function selectAnswerA() {
+    document.getElementById("optionA").classList.add("answer-active");
+    checkAnswer();
+}
+function selectAnswerB() {
+    document.getElementById("optionB").classList.add("answer-active");
+    checkAnswer();
+}
+function selectAnswerC() {
+    document.getElementById("optionC").classList.add("answer-active");
     checkAnswer();
 }
 
 //Check if awnwer selected is the correct answer Function
-function checkAnswer() {
-    for (var i = 0; i < answerButtons.length; i++) {
-            answerButtons[i].addEventListener("click", function() {
-                var selectedAnswer = document.getElementsByClassName("answer-active");
+// function checkAnswer() {
+//     for (var i = 0; i < options.length; i++) {
+//             options[i].addEventListener("click", function() {
+//                 let selectedAnswer = document.getElementsByClassName("answer-active");
         
-                // If there's no active class
-                if (current.length > 0) {
-                    current[0].className = current[0].className.replace(" answer-active", "");
-                }
+//                 // If there's no active class
+//                 if (current.length > 0) {
+//                     current[0].className = current[0].className.replace(" answer-active", "");
+//                 }
         
-                // Add the active class to the current/clicked button
-                this.className += " answer-active";
-            });
-        }
-    // if (selectedAnswerTOBECREATED === correctAnswer.value) {
-    //     answeredCorrectly = True;
-    //     //selectedAnswerTOBECREATED becomes Green;
-    //     // If confirming button will be used: button.addEventListener("click", submitAnswer);
-    // } else {
-    //     answeredCorrectly = False;
-    //     //selectedAnswerTOBECREATED becomes Red;
-    //     //correctAsnwer becomes green;
-    // }
-}
+//                 // Add the active class to the current/clicked button
+//                 this.className += " answer-active";
+//             });
+//         }
+    if (selectedAnswer.innerHTML === correctAnswer.value) {
+        answeredCorrectly = True;
+        //selectedAnswerTOBECREATED becomes Green;
+        // If confirming button will be used: button.addEventListener("click", submitAnswer);
+    } else {
+        answeredCorrectly = False;
+        //selectedAnswerTOBECREATED becomes Red;
+        //correctAsnwer becomes green;
+    }
+
 
 
 // Loop through the buttons and add the active class to the current/clicked button
@@ -140,10 +143,10 @@ function showQuestion(index) {
 
     questionp.textContent = `${questions[index].question}`;
     let optionTag =
-        `<div id="answer-buttons"><button id="optionA" class="options btn">${questions[index].options.optionA}</button></div>
-    <div id="answer-buttons"><button id="optionB" class="options btn">${questions[index].options.optionB}</button></div>
-    <div id="answer-buttons"><button id="optionC" class="options btn">${questions[index].options.optionC}</button></div>`;
-    answerButtons.innerHTML = optionTag;
+        `<button id="optionA" class="btn">${questions[index].options.optionA}</button>
+    <button id="optionB" class="btn">${questions[index].options.optionB}</button>
+    <button id="optionC" class="btn">${questions[index].options.optionC}</button>`;
+    options.innerHTML = optionTag;
 }
 
 

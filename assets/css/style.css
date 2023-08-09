@@ -102,6 +102,11 @@ input:-internal-autofill-selected {
     display: none;
 }
 
+img {
+    height: 600px;
+    margin: 0 27.5% 0 27.5%;
+}
+
 #countdown-timer {
     display: flex;
     position: relative;
@@ -119,12 +124,6 @@ input:-internal-autofill-selected {
     background: rgb(172, 172, 172);
     font-weight: 500;
     font-size: 300%;
-}
-
-
-
-#countdown-timer[class="5left"] {
-    color: red;
 }
 
 #user-input {
@@ -218,31 +217,25 @@ button {
     bottom: 45px;
 }
 
-#answer-buttons {
-    text-align: center;
-    width: 100%;
+#options {
     background: transparent;
+    text-align: center;
+    width: 65%;
 }
 
-.options , .options:autofill {
+.btn {
     position: relative;
     font-size: 16px;
     cursor: auto;
     width: 50%;
-    
+    }
+
+.btn:hover {
+    background: #6f6f6f;
 }
 
-.options:hover {
-    background: #707070;
-}
-
-.options:active {
+.answer-active {
     border: solid 2px;
     color: red;
 }
 
-img {
-    /* transform: translate(50%, 0%); */
-    height: 600px;
-    margin: 0 27.5% 0 27.5%;
-}
