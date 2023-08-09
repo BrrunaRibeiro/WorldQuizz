@@ -70,7 +70,7 @@ function checkAnswer() {
         
                 // Add the active class to the current/clicked button
                 this.className += " answer-active";
-            };
+            });
         }
     // if (selectedAnswerTOBECREATED === correctAnswer.value) {
     //     answeredCorrectly = True;
@@ -115,16 +115,9 @@ function back() {
 
 }
 
-Exit game completely and go back to index.html page function
-function exit() {
 
-}
-
-
-     checkAnswer();
      updateScore();
-     next();
-     reset();
+    finalScreen();
 */
 //Reset the 10 second timer for the next question 
 function resetTimer() {
@@ -132,24 +125,24 @@ function resetTimer() {
     countdownTimer.innerText = 10; 
 }
 
-//When the "Next" button is clicked the questionCount(index) is incremented with the ++ operator, presnting the next question
+//When the "Next" button is clicked the questionCount(index) is incremented with the ++ operator, presenting the next question
 function next() {
         questionCount++;
         showQuestion(questionCount);
-        resetTimer();
 }
 
 //Display question and asnwer options and calls the timer() function
 function showQuestion(index) {
     qanda.classList.remove("hide");
     input.classList.add("hide");
+    resetTimer();
     timer();
 
     questionp.textContent = `${questions[index].question}`;
     let optionTag =
         `<div id="answer-buttons"><button id="optionA" class="options btn">${questions[index].options.optionA}</button></div>
-    <div id="answer-buttons"><button id="optionA" class="options btn">${questions[index].options.optionB}</button></div>
-    <div id="answer-buttons"><button id="optionA" class="options btn">${questions[index].options.optionC}</button></div>`;
+    <div id="answer-buttons"><button id="optionB" class="options btn">${questions[index].options.optionB}</button></div>
+    <div id="answer-buttons"><button id="optionC" class="options btn">${questions[index].options.optionC}</button></div>`;
     answerButtons.innerHTML = optionTag;
 }
 

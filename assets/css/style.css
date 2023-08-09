@@ -240,3 +240,9 @@ button {
     border: solid 2px;
     color: red;
 }
+
+img {
+    /* transform: translate(50%, 0%); */
+    height: 600px;
+    margin: 0 27.5% 0 27.5%;
+}

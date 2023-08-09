@@ -1,6 +1,6 @@
 # WorldQuizz
 
-![WorldQuizz](Link to deployed webpage)
+![WorldQuizz](https://brrunaribeiro.github.io/project-2/)
 
 World Quizz was created with the intention to bring general knowledge about Travel, Geography and Local Curiosity. 
 You will find the questions not difficult to answer, it's probably things you already heard of back in school or while traveling yourself, otherwise, you just agregated knowledge.
