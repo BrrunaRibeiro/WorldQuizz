@@ -68,14 +68,16 @@ function selectAnswer() {
         optionSelected();
     }
     answerC.onclick = () => {
-        answerB.classList.toggle("optionSelected(this)");
+        // answerB.classList.toggle("optionSelected(this)");
+        // optionSelected();
+        answerC.setAttribute('onclick', 'optionSelected(this)');
         optionSelected();
     }
 }
 
 //Check if awnwer selected is the correct answer Function
 function optionSelected(answer) {
-    let selectedAnswer = this.answer;
+    let selectedAnswer = answer.textContent;
     const correctOption = questions[questionCount].correctAnswer;
     if (selectedAnswer === correctOption) {
         // User's answer is correct
