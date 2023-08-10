@@ -7,7 +7,6 @@
 }
 
 body {
-
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
@@ -54,12 +53,12 @@ li {
     text-transform: uppercase;
     letter-spacing: 3.5px;
     background: transparent;
-    
+
 }
 
 .logo:hover {
     transform: scale(1.02);
-    }
+}
 
 .container {
     position: absolute;
@@ -126,6 +125,7 @@ img {
     color: #ffffff;
     position: absolute;
     text-align: center;
+    background: transparent;
 }
 
 input,
@@ -141,6 +141,10 @@ button {
     border: solid 1px rgb(172, 172, 172);
 }
 
+label {
+    font-size: 10px;
+    background: transparent;
+}
 
 #start,
 #tutorial {
@@ -217,9 +221,72 @@ button {
     font-size: 16px;
     cursor: auto;
     width: 50%;
-    }
+}
 
 .btn:hover {
     background: #6f6f6f;
 }
 
+@media only screen and (max-width: 768px) {
+
+    header {
+        padding-top: 0;
+    }
+
+    nav>ul {
+        display: flex;
+        align-items: baseline;
+        flex-direction: column;
+    }
+
+    img {
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .logo {
+        padding-top: 28px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    header {
+        position: absolute;
+        padding-top: 0;
+        width:425px;
+        left: 15%;
+
+    }
+    #countdown-timer{
+        bottom: 83px;
+        left: 180px;
+    }
+    
+    nav>ul {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        height: 562px;
+        width: 562px;
+        top: 65%;
+        left: 66.5%;
+    }
+    
+    img {
+        position: absolute;
+        top: 6%;
+        left: -28%;
+        scale: 0.9;
+    }
+
+    #exit {
+        position: relative;
+        bottom: 0;
+        left: 0;
+}
+}
