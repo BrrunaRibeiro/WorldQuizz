@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     //Start Tutorial Function
     function startTutorial() {
         let img = document.createElement('img');
-        img.src = "../assets/images/tutorial.webp";
+        img.src = "images/tutorial.webp";
         img.width = 750;
         img.height = 750;
         document.body.appendChild(img);
