@@ -6,11 +6,10 @@ World Quizz was created with the intention to bring general knowledge about Trav
 You will find the questions not difficult to answer, it's probably things you already heard of back in school or while traveling yourself, otherwise, you just agregated knowledge.
 
 You have one question, and three options for answer, from which only one is correct. A countdown timer is at the top-right corner, you have 10 seconds to answer the question.
-After selecting the question, you will see the correct answer becomes green. If you selected the wrong answer, the selected answer becomes red, and the correct answer green, so you can still learn even if you answered wrong.
-You can move to the next question. There are 10 questions in total. 
-A scorebord in the end screen will display your score based on how many questions you answered correctly. 
+There are 5 questions in total. 
+An alert will display your score based on how many questions you answered correctly out of 5.
 
-main SCREENSHOT
+![WordQuizz]()
 
 ##Features
 
