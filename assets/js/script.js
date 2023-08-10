@@ -1,6 +1,9 @@
 import { questions } from "./questionscontent.js";
 
-//Assign const variable to main elements for future use
+document.addEventListener("DOMContentLoaded", (event) => {
+
+
+    //Assign const variable to main elements for future use
 const countdownTimer = document.getElementById("countdown-timer");
 const tutorialButton = document.getElementById("tutorial")
 tutorialButton.addEventListener("click", startTutorial);
@@ -8,8 +11,10 @@ const startButton = document.getElementById("start");
 startButton.addEventListener("click", startGame);
 const nextButton = document.getElementById("next")
 nextButton.addEventListener("click", next);
+
 //const options = document.querySelector("#options");
 const option = document.getElementsByClassName("btn");
+
 const answerA = document.getElementById("optionA")
 
 const answerB = document.getElementById("optionB");
@@ -54,12 +59,16 @@ function resetTimer() {
     countdownTimer.innerText = 10;
 }
 
+for (var i = 0; i < option.length; i++) {
+         option[i].addEventListener("click", optionSelected);
+}
+
 function optionSelected(event) {
-	const clickedItem = event.target;
+	const clickedItem = event.target.innerText;
 	const correctOption = questions[questionCount].correctAnswer;
-	if (correctOption === clickedItem.text) {
+	if (correctOption === clickedItem) {
         console.log("Correct!");
-         score++; // Increase the score or perform any other actions
+         score++; 
     }  else {
     // User's answer is incorrect
             console.log("Incorrect!");
@@ -100,10 +109,7 @@ function optionSelected(event) {
 // }
 // for (var i = 0; i < option.length; i++) {
 //     const button = option[i];
-// // Check if the button has the "answer-active" class
-// if (button.classList.contains("answer-active")) {
-//     let selectedAnswer = button.classList.contains("answer-active").id;
-//         console.log(selectedAnswer);
+
 // }
 // }
 
@@ -194,3 +200,5 @@ function startGame() {
     score = 0;
     showQuestion(0);
 }
+  });
+
