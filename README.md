@@ -1,6 +1,6 @@
 # WorldQuizz
 
-![WorldQuizz](https://brrunaribeiro.github.io/project-2/)
+[WorldQuizz](https://brrunaribeiro.github.io/project-2/)
 
 World Quizz was created with the intention to bring general knowledge about Travel, Geography and Local Curiosity. 
 You will find the questions not difficult to answer, it's probably things you already heard of back in school or while traveling yourself, otherwise, you just agregated knowledge.
@@ -9,7 +9,7 @@ You have one question, and three options for answer, from which only one is corr
 There are 5 questions in total. 
 An alert will display your score based on how many questions you answered correctly out of 5.
 
-![WordQuizz](assets/images/project-screenshot1.webp)
+![WordQuizz](project-screenshot1.webp)
 
 ##Features
 
@@ -46,7 +46,7 @@ The Quizz was build to agregate knowledge. You will find the questions easy to a
 
 - A timer funtion has been added to give the User 10 second to select the correct answer. 
 
-![Question and Asnwer options with Timer](assets/images/project-screenshot3.webp)
+![Question and Asnwer options with Timer](/assets/images/project-screenshot3.webp)
 
 
 ###Features to be be Implemented
@@ -61,7 +61,7 @@ The Quizz was build to agregate knowledge. You will find the questions easy to a
 
 * W3C Validator - Passed
 * W3C CSS Validator - Passed
-* [WAVE](#wave)
+* Wave - Passed
 
 ## BUGS
 
@@ -69,30 +69,21 @@ The Quizz was build to agregate knowledge. You will find the questions easy to a
 
 - Timer is not working properly even with ClearTimerInterval being adjusted.
 
-### Solved Bugs
-
-
-This is where all solved bugs go once squashed. List what the bug was, and how you managed to fix it. You can also include images/videos here if you wanted.
-
 
 ##Credits
 
-![StartButton](https://uiverse.io/) - UiVerse.
-
-
-
+[Uiverse](https://uiverse.io/) - Start Button.
     
 ###Media
 
 -__WireFrames__
 
-- Made with "MarvelAp" LINK\
-<iframe src="https://marvelapp.com/prototype/bj49j2h?emb=1&iosapp=false&frameless=false" width="1440" height="1024" allowTransparency="true" frameborder="0" style="-webkit-clip-path: inset(2px 2px); clip-path: inset(2px 2px);"></iframe>
+[MarvelApp](https://marvelapp.com/prototype/bj49j2h)
+
 
 -__Favicon__
     
-- Made with "FavIcon Generator"
- https://favicon.io/
+[FavIcon Generator]( https://favicon.io/)
 
 
 ###Acknowledgements
