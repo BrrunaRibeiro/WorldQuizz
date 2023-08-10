@@ -1,14 +1,4 @@
-import {questions} from "./questionscontent.js";
-
-document.addEventListener("DOMContentLoaded", function () {
-    const button = document.getElementsByTagName("button");
-})
-
-const questionp = document.getElementById("questionp");
-let questionCount = 0;
-let score = 0;
-let countdownInterval = 10;
-let selectedAnswer;
+import { questions } from "./questionscontent.js";
 
 //Assign const variable to main elements for future use
 const countdownTimer = document.getElementById("countdown-timer");
@@ -18,9 +8,17 @@ const startButton = document.getElementById("start");
 startButton.addEventListener("click", startGame);
 const nextButton = document.getElementById("next")
 nextButton.addEventListener("click", next);
-const options = document.querySelector("#options");
-const answerButtons = document.querySelector(".btn");
+//const options = document.querySelector("#options");
+const option = document.getElementsByClassName("btn");
+const answerA = document.getElementById("optionA");
+const answerB = document.getElementById("optionB");
+const answerC = document.getElementById("optionC");
+const questionp = document.getElementById("questionp");
 
+let questionCount = 0;
+let score = 0;
+let countdownInterval = 10;
+let selectedAnswer;
 
 //Start Tutorial Function
 function startTutorial() {
@@ -47,65 +45,84 @@ function timer() {
     }, 1000);
 }
 
-function selectAnswerA() {
-    document.getElementById("optionA").classList.add("answer-active");
-    checkAnswer();
+//Reset the 10 second timer for the next question 
+function resetTimer() {
+    clearInterval(countdownInterval);
+    countdownTimer.innerText = 10;
 }
-function selectAnswerB() {
-    document.getElementById("optionB").classList.add("answer-active");
-    checkAnswer();
-}
-function selectAnswerC() {
-    document.getElementById("optionC").classList.add("answer-active");
-    checkAnswer();
+
+// for (const btn of option) {
+//     btn.addEventListener('click', true) 
+//         if (true) {
+//             btn.classList.add("asnwer-active");
+// }
+// }
+function selectAnswer() {
+
+    answerA.onclick = () => {
+        answerA.classList.toggle("optionSelected(this)");
+        optionSelected();
+    }
+    answerB.onclick = () => {
+        answerB.classList.toggle("optionSelected(this)");
+        optionSelected();
+    }
+    answerC.onclick = () => {
+        answerB.classList.toggle("optionSelected(this)");
+        optionSelected();
+    }
 }
 
 //Check if awnwer selected is the correct answer Function
-// function checkAnswer() {
-//     for (var i = 0; i < options.length; i++) {
-//             options[i].addEventListener("click", function() {
-//                 let selectedAnswer = document.getElementsByClassName("answer-active");
-        
-//                 // If there's no active class
-//                 if (current.length > 0) {
-//                     current[0].className = current[0].className.replace(" answer-active", "");
-//                 }
-        
+function optionSelected(answer) {
+    let selectedAnswer = this.answer;
+    const correctOption = questions[questionCount].correctAnswer;
+    if (selectedAnswer === correctOption) {
+        // User's answer is correct
+        console.log("Correct!");
+        score++; // Increase the score or perform any other actions
+    } else {
+        // User's answer is incorrect
+        console.log("Incorrect!");
+    }
+}
+// for (var i = 0; i < option.length; i++) {
+//     const button = option[i];
+// // Check if the button has the "answer-active" class
+// if (button.classList.contains("answer-active")) {
+//     let selectedAnswer = button.classList.contains("answer-active").id;
+//         console.log(selectedAnswer);
+// }
+// }
+
 //                 // Add the active class to the current/clicked button
 //                 this.className += " answer-active";
 //             });
 //         }
-    if (selectedAnswer.innerHTML === correctAnswer.value) {
-        answeredCorrectly = True;
-        //selectedAnswerTOBECREATED becomes Green;
-        // If confirming button will be used: button.addEventListener("click", submitAnswer);
-    } else {
-        answeredCorrectly = False;
-        //selectedAnswerTOBECREATED becomes Red;
-        //correctAsnwer becomes green;
-    }
-
-
-
-// Loop through the buttons and add the active class to the current/clicked button
-// for (var i = 0; i < btn.length; i++) {
-//     answerButtons[i].addEventListener("click", function() {
-//         var current = document.getElementsByClassName("active");
-
-//         // If there's no active class
-//         if (current.length > 0) {
-//             current[0].className = current[0].className.replace(" active", "");
-//         }
-
-//         // Add the active class to the current/clicked button
-//         this.className += " active";
-//     });
+// if (selectedAnswer.innerHTML === correctAnswer.value) {
+//     answeredCorrectly = True;
+//     //selectedAnswerTOBECREATED becomes Green;
+// } else {
+//     answeredCorrectly = False;
+//     //selectedAnswerTOBECREATED becomes Red;
+//     //correctAsnwer becomes green;
 // }
+// function selectAnswer(selectedOption) {
+//     console.log("You did it");
+// const correctOption = questions[questionCount].correctOption; // Replace with how you store the correct answer in your questions array
+// if (selectedOption === correctOption) {
+//     // User's answer is correct
+//     console.log("Correct!");
+//     score++; // Increase the score or perform any other actions
+// } else {
+//     // User's answer is incorrect
+//     console.log("Incorrect!");
+//}
 
 
 
+//finalScreen();
 
-/*
 //Score update Function based on AsnweredCorrectly being True or False
 function updateScore() {
     if (answeredCorrectly == True) {
@@ -113,25 +130,10 @@ function updateScore() {
     }
 }
 
-See previous question Funtion
-function back() {
-
-}
-
-
-     updateScore();
-    finalScreen();
-*/
-//Reset the 10 second timer for the next question 
-function resetTimer() {
-    clearInterval(countdownInterval);
-    countdownTimer.innerText = 10; 
-}
-
 //When the "Next" button is clicked the questionCount(index) is incremented with the ++ operator, presenting the next question
 function next() {
-        questionCount++;
-        showQuestion(questionCount);
+    questionCount++;
+    showQuestion(questionCount);
 }
 
 //Display question and asnwer options and calls the timer() function
@@ -142,13 +144,28 @@ function showQuestion(index) {
     timer();
 
     questionp.textContent = `${questions[index].question}`;
-    let optionTag =
-        `<button id="optionA" class="btn">${questions[index].options.optionA}</button>
-    <button id="optionB" class="btn">${questions[index].options.optionB}</button>
-    <button id="optionC" class="btn">${questions[index].options.optionC}</button>`;
-    options.innerHTML = optionTag;
+    let optionTag1 = `<span id="optionA" class="btn optionA">${questions[index].options.optionA}</span>`;
+    let optionTag2 = `<span id="optionA" class="btn optionB">${questions[index].options.optionB}</span>`;
+    let optionTag3 = `<span id="optionA" class="btn optionC">${questions[index].options.optionC}</span>`;
+
+    answerA.innerHTML = optionTag1;
+    answerB.innerHTML = optionTag2;
+    answerC.innerHTML = optionTag3;
+    selectAnswer();
 }
 
+
+// let userAnswer = option[i].onclick;
+// let correct = questions[questionCount].correctAnswer;
+// for (let i = 0; i < option.length; i++) {
+//     option[i].setAttribute('correct', alert("You did ut"));
+//     if (userAnswer == correctAnswer) {
+//         console.log('Answer is correct');
+//         answer.classList.add("correct");
+//     } else {
+//         console.log('Answer is WRONG');
+// }
+// }
 
 //Start game fuction validates if inputs Name and Age are provided and calls the showQuestion() function
 function startGame() {
@@ -166,4 +183,3 @@ function startGame() {
     score = 0;
     showQuestion(0);
 }
-
