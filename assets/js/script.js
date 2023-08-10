@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     //Assign const variable to main elements for future use
     const countdownTimer = document.getElementById("countdown-timer");
-    const tutorialButton = document.getElementById("tutorial")
-    tutorialButton.addEventListener("click", startTutorial);
     const startButton = document.getElementById("start");
     startButton.addEventListener("click", startGame);
     const nextButton = document.getElementById("next")
@@ -22,16 +20,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let score = 0;
     let countdownInterval = 10;
 
-
-    //Start Tutorial Function
-    function startTutorial() {
-        let img = document.createElement('img');
-        img.src = "images/tutorial.webp";
-        img.width = 750;
-        img.height = 750;
-        document.body.appendChild(img);
-        input.classList.add("hide");
-    }
 
     //Timer countdown Function
     function timer() {

@@ -11,11 +11,11 @@ An alert will display your score based on how many questions you answered correc
 
 ![WordQuizz](project-screenshot1.webp)
 
-##Features
+## Features
 
 The Quizz was build to agregate knowledge. You will find the questions easy to asnwer, and be able to learn small bits of information, worldwide curiosities and facts, while playing an interesting and fun game. 
 
-###Existing Features
+### Existing Features
 
 -__Navigation Bar__
 
@@ -27,11 +27,7 @@ The Quizz was build to agregate knowledge. You will find the questions easy to a
 - The index page consists of a User Input, where the name and age will be validated prior to starting the game.
 - If both the name and age are provided, you can either start the quizz or see the tutorial with the instructions on how to play.
 
-![UserInput](assets/images/project-screenshot2.webp)
-
-- __Tutorial__
-
-- A small but descriptive tutorial with basic instructions has been added to help the First Time User to navigate easily through the Quiz.
+![UserInput](images/project-screenshot2.webp)
 
 -__Start Button__
 
@@ -49,7 +45,7 @@ The Quizz was build to agregate knowledge. You will find the questions easy to a
 ![Question and Asnwer options with Timer](/assets/images/project-screenshot3.webp)
 
 
-###Features to be be Implemented
+### Features to be be Implemented
 
 -__LeaderBoard__
     
@@ -57,7 +53,7 @@ The Quizz was build to agregate knowledge. You will find the questions easy to a
 
 - Share button.
 
-##Testing
+## Testing
 
 * W3C Validator - Passed
 * W3C CSS Validator - Passed
@@ -74,7 +70,7 @@ The Quizz was build to agregate knowledge. You will find the questions easy to a
 
 [Uiverse](https://uiverse.io/) - Start Button.
     
-###Media
+### Media
 
 -__WireFrames__
 
@@ -86,6 +82,6 @@ The Quizz was build to agregate knowledge. You will find the questions easy to a
 [FavIcon Generator]( https://favicon.io/)
 
 
-###Acknowledgements
+### Acknowledgements
 
-#My Mentor - For all the support and knowledge shared throughout the development of this project.
+- My Mentor - For all the support and knowledge shared throughout the development of this project.
