@@ -94,10 +94,6 @@ input:focus-visible {
     color: #ffffff;
 }
 
-input:-internal-autofill-selected {
-    background-color: #474747;
-}
-
 .hide {
     display: none;
 }
@@ -207,7 +203,6 @@ button {
 
 #next:hover {
     background: #525252;
-    
 }
 
 #questionp {
@@ -215,12 +210,6 @@ button {
     background: transparent;
     position: relative;
     bottom: 45px;
-}
-
-#options {
-    background: transparent;
-    text-align: center;
-    width: 65%;
 }
 
 .btn {
@@ -232,10 +221,5 @@ button {
 
 .btn:hover {
     background: #6f6f6f;
-}
-
-.answer-active {
-    border: solid 2px;
-    color: red;
 }
 

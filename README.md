@@ -132,25 +132,11 @@ You will need to run the Lighthouse testing on each individual page of your site
 
 ![Wave Exetension](documentation/milestone1-testing/wqave-extension.png)
 
-## MANUAL TESTING
-
-### Testing User Stories
-
-👩🏻‍💻 View an example of a completed user stories testing section [here](https://github.com/kera-cudmore/BookWorm/blob/main/TESTING.md#Testing-User-Stories)
-
-This is where you will test the user stories you created in the README against your site. I like to use a table for this section - I create a column for the user stories goals, how these have been achieved and I use the third column to add any supporting images.
-
-### Full Testing
-
-
-
-Full testing can be tedious, so it is great to try and break this part up into smaller chunks and do a bit at a time. Full testing is when you go through the site and test every single thing that can be tested. So for example you would test that all links in the navbar correctly redirect the user to where there are supposed to go. A table is the perfect way to display this information.
-
 ## BUGS
 
 ### Known Bugs
 
-List (or put in a table) all known bugs on your site here as soon as you find them. This will prevent you from forgetting any at the end. Some (if not all) of these bugs will hopefully make their way over to the next section, solved bugs, as you progress through your project.
+- Timer is not working properly even with ClearTimerInterval being adjusted.
 
 ### Solved Bugs
 
@@ -177,8 +163,6 @@ This is where all solved bugs go once squashed. List what the bug was, and how y
     
 - Made with "FavIcon Generator"
  https://favicon.io/
-
-
 
 
 ###Acknowledgements
