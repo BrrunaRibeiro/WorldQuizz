@@ -10,10 +10,13 @@ const nextButton = document.getElementById("next")
 nextButton.addEventListener("click", next);
 //const options = document.querySelector("#options");
 const option = document.getElementsByClassName("btn");
-const answerA = document.getElementById("optionA");
+const answerA = document.getElementById("optionA")
+
 const answerB = document.getElementById("optionB");
 const answerC = document.getElementById("optionC");
 const questionp = document.getElementById("questionp");
+
+
 
 let questionCount = 0;
 let score = 0;
@@ -51,43 +54,50 @@ function resetTimer() {
     countdownTimer.innerText = 10;
 }
 
-// for (const btn of option) {
-//     btn.addEventListener('click', true) 
-//         if (true) {
-//             btn.classList.add("asnwer-active");
-// }
-// }
-function selectAnswer() {
-
-    answerA.onclick = () => {
-        answerA.classList.toggle("optionSelected(this)");
-        optionSelected();
-    }
-    answerB.onclick = () => {
-        answerB.classList.toggle("optionSelected(this)");
-        optionSelected();
-    }
-    answerC.onclick = () => {
-        // answerB.classList.toggle("optionSelected(this)");
-        // optionSelected();
-        answerC.setAttribute('onclick', 'optionSelected(this)');
-        optionSelected();
-    }
+function optionSelected(event) {
+	const clickedItem = event.target;
+	const correctOption = questions[questionCount].correctAnswer;
+	if (correctOption === clickedItem.text) {
+        console.log("Correct!");
+         score++; // Increase the score or perform any other actions
+    }  else {
+    // User's answer is incorrect
+            console.log("Incorrect!");
+            }
 }
+
+// function selectAnswer() {
+
+//     answerA.onclick = () => {
+//         answerA.classList.toggle("optionSelected(this)");
+//         optionSelected();
+//     }
+//     answerB.onclick = () => {
+//         answerB.classList.toggle("optionSelected(this)");
+//         optionSelected();
+//     }
+//     answerC.onclick = () => {
+//         answerB.classList.toggle("optionSelected(this)");
+//         // optionSelected();
+//         // answerC.setAttribute('onclick', 'optionSelected(this)');
+//         // optionSelected();
+//         checkAnswer();
+//     }
+// }
 
 //Check if awnwer selected is the correct answer Function
-function optionSelected(answer) {
-    let selectedAnswer = answer.textContent;
-    const correctOption = questions[questionCount].correctAnswer;
-    if (selectedAnswer === correctOption) {
-        // User's answer is correct
-        console.log("Correct!");
-        score++; // Increase the score or perform any other actions
-    } else {
-        // User's answer is incorrect
-        console.log("Incorrect!");
-    }
-}
+// function checkAnswer {
+//     //let selectedAnswer = event.target
+//     const correctOption = questions[questionCount].correctAnswer;
+//     if (selectedAnswer === correctOption) {
+//         // User's answer is correct
+//         console.log("Correct!");
+//         score++; // Increase the score or perform any other actions
+//     } else {
+//         // User's answer is incorrect
+//         console.log("Incorrect!");
+//     }
+// }
 // for (var i = 0; i < option.length; i++) {
 //     const button = option[i];
 // // Check if the button has the "answer-active" class
@@ -147,13 +157,12 @@ function showQuestion(index) {
 
     questionp.textContent = `${questions[index].question}`;
     let optionTag1 = `<span id="optionA" class="btn optionA">${questions[index].options.optionA}</span>`;
-    let optionTag2 = `<span id="optionA" class="btn optionB">${questions[index].options.optionB}</span>`;
-    let optionTag3 = `<span id="optionA" class="btn optionC">${questions[index].options.optionC}</span>`;
+    let optionTag2 = `<span id="optionB" class="btn optionB">${questions[index].options.optionB}</span>`;
+    let optionTag3 = `<span id="optionC" class="btn optionC">${questions[index].options.optionC}</span>`;
 
     answerA.innerHTML = optionTag1;
     answerB.innerHTML = optionTag2;
     answerC.innerHTML = optionTag3;
-    selectAnswer();
 }
 
 
