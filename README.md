@@ -63,11 +63,13 @@ __Leader Board__
 
 
 
-## BUGS
+## Bugs
 
 ### Known Bugs
 
 - Timer is not working properly even with ClearTimerInterval being adjusted.
+
+### Fixed bugs
 
 
 ## Credits

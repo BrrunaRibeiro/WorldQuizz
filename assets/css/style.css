@@ -7,12 +7,11 @@
 }
 
 body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-    margin: 0;
-    font-family: 'Mulish', sans-serif;
-    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
 }
 
 nav,
@@ -29,7 +28,6 @@ nav>ul {
 }
 
 li {
-    padding: 50px 80px 10px 80px;
     list-style: none;
     letter-spacing: 2px;
 }
@@ -41,7 +39,7 @@ li {
 
 #exit {
     position: relative;
-    bottom: 81px;
+    bottom: 24px;
     left: 450px;
 }
 
@@ -53,7 +51,6 @@ li {
     text-transform: uppercase;
     letter-spacing: 3.5px;
     background: transparent;
-
 }
 
 .logo:hover {
@@ -61,21 +58,16 @@ li {
 }
 
 .container {
-    position: absolute;
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     height: 600px;
     width: 600px;
     border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background: #474747;
     box-shadow: inset 33px 33px 66px #3e3e3e,
-        inset -33px -33px 66px #505050;
+                inset -33px -33px 66px #505050;
 }
 
 input {
@@ -99,7 +91,6 @@ input:focus-visible {
 
 img {
     height: 600px;
-    margin: 0 27.5% 0 27.5%;
 }
 
 #countdown-timer {
