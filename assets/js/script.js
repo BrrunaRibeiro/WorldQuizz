@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const countdownTimer = document.getElementById("countdown-timer");
     const startButton = document.getElementById("start");
     startButton.addEventListener("click", startGame);
-    const nextButton = document.getElementById("next")
+    const nextButton = document.getElementById("next");
     nextButton.addEventListener("click", next);
     const option = document.getElementsByClassName("btn");
-    const answerA = document.getElementById("optionA")
+    const answerA = document.getElementById("optionA");
     const answerB = document.getElementById("optionB");
     const answerC = document.getElementById("optionC");
     const questionp = document.getElementById("questionp");
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     //Timer countdown Function
     function timer() {
         let count = 10;
-        countdownTimer.innerText = count;
+        // countdownTimer.innerText = count; May be causing the timer bug
         const countdownInterval = setInterval(() => {
             count--;
             countdownTimer.innerText = count;
@@ -111,10 +111,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
             console.log("Name:", userName);
             console.log("Age:", userAge);
         };
-
         questionCount = 0;
         score = 0;
         showQuestion(0);
         return;
-    }
+    };
 });
