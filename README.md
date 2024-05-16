@@ -9,7 +9,7 @@ You have one question, and three options for answer, from which only one is corr
 There are 5 questions in total. 
 An alert will display your score based on how many questions you answered correctly out of 5.
 
-![WorldQuizz](assets\images\project-screenshot1.webp)
+![WorldQuizz](..\assets\images\project-screenshot1.webp)
 
 ## Features
 
@@ -27,7 +27,7 @@ __User Inputs page__
 - The index page consists of a User Input, where the name and age will be validated prior to starting the game.
 - If both the name and age are provided, you can either start the quizz or see the tutorial with the instructions on how to play.
 
-![UserInput](assets\images\project-screenshot2.webp)
+![UserInput](..\assets\images\project-screenshot2.webp)
 
 __Start Button__
 
@@ -42,7 +42,7 @@ __Timer__
 
 - A timer function has been added to give the User 10 second to select the correct answer. 
 
-![Question and Answer options with Timer](assets\images\project-screenshot3.webp)
+![Question and Answer options with Timer](..\assets\images\project-screenshot3.webp)
 
 
 ### Features to be implemented
@@ -82,7 +82,7 @@ __Leader Board__
 
 __WireFrames__: [MarvelApp](https://marvelapp.com/prototype/bj49j2h)
 
-__Favicon__: [FavIcon Generator]( https://favicon.io/)
+__Favicon__: [FavIcon Generator](https://favicon.io/)
 
 
 ### Acknowledgements
