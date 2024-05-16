@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;600;700&display=swap');
+@import url("https://use.typekit.net/tqr6gks.css");
 
 * {
     margin: 0;
@@ -7,6 +8,9 @@
 }
 
 body {
+    font-family: "mono45-headline", monospace;
+    font-weight: 300;
+    font-style: normal;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,11 +45,12 @@ li {
     position: relative;
     bottom: 24px;
     left: 450px;
+    font-weight: 100;
 }
 
 .logo {
     font-weight: 400;
-    font-size: 22px;
+    font-size: 25px;
     padding-top: 48px;
     color: #ffffff;
     text-transform: uppercase;
@@ -67,10 +72,11 @@ li {
     border-radius: 50%;
     background: #474747;
     box-shadow: inset 33px 33px 66px #3e3e3e,
-                inset -33px -33px 66px #505050;
+        inset -33px -33px 66px #505050;
 }
 
 input {
+    font-family: "mono45-headline", monospace;
     bottom: 29%;
     position: relative;
     height: 150px;
@@ -116,7 +122,12 @@ img {
     color: #ffffff;
     position: absolute;
     text-align: center;
-    background: transparent;
+}
+
+::placeholder, input:-internal-autofill-selected, input:focus-visible, input:-internal-autofill-previewed {
+    font-family: "mono45-headline", monospace;
+    font-weight: 100;
+    background-color: #474747 !important;
 }
 
 input,
@@ -205,18 +216,26 @@ label {
 
 .btn:hover {
     background: #6f6f6f;
+    span[class="btn"] {
+        background: #6f6f6f;
+    }
 }
+
+span[class="btn"] {
+    background: transparent;
+}
+
 
 /* Remove arrow from input with type of Number in Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* Remove arrow from input with type of Number in Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 @media only screen and (max-width: 768px) {
@@ -240,15 +259,16 @@ input[type=number] {
     header {
         position: absolute;
         padding-top: 0;
-        width:425px;
+        width: 425px;
         left: 15%;
 
     }
-    #countdown-timer{
+
+    #countdown-timer {
         bottom: 83px;
         left: 180px;
     }
-    
+
     nav>ul {
         display: flex;
         flex-direction: column;
@@ -268,5 +288,5 @@ input[type=number] {
         position: relative;
         bottom: 0;
         left: 0;
-}
+    }
 }

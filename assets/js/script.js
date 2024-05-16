@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         answerC.innerHTML = optionTag3;
     }
 
-    //Start game fuction validates if inputs Name and Age are provided and calls the showQuestion() function
+    //Start game function validates if inputs Name and Age are provided and calls the showQuestion() function
     function startGame() {
         let userName = document.getElementById("name").value;
         let userAge = document.getElementById("age").value;
