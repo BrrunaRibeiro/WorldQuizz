@@ -77,7 +77,9 @@ __Leader Board__
 [Uiverse](https://uiverse.io/) - Start Button.
 
 [W3C](https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp) - Remove default appearance of the input field with "Number" type.
-    
+
+[GeeksforGeeks](https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/) - Assisted to biuld the function to randomize the questions.
+
 ### Media
 
 __WireFrames__: [MarvelApp](https://marvelapp.com/prototype/bj49j2h)

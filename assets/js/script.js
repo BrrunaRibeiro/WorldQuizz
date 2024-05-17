@@ -110,6 +110,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
         document.getElementById("optionC").addEventListener("click", optionSelected);
     }
 
+    //Randomize the order of the questions 
+    function randomizeQuestions(array) {
+        for (let i = array.lenght -1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]]
+        }
+    }
+
     //Start game function validates if inputs Name and Age are provided and calls the showQuestion() function
     function startGame() {
         let userName = document.getElementById("name").value;
@@ -127,6 +135,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             questionCount = 0;
             questionNum = 0;
             score = 0;
+            randomizeQuestions(questions);
             showQuestion(0);
         };
     };
