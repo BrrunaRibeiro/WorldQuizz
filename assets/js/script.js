@@ -18,20 +18,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let questionCount = 0;
     let questionNum = 0;
     let score = 0;
-    let countdownInterval = 10;
+    let countdownInterval;
 
 
-    //Timer countdown Function
+    // Timer countdown Function
     function timer() {
         let count = 10;
-        // countdownTimer.innerText = count; May be causing the timer bug
-        const countdownInterval = setInterval(() => {
+        countdownTimer.innerText = count;
+        countdownInterval = setInterval(() => {
             count--;
             countdownTimer.innerText = count;
             if (count === 0) {
                 clearInterval(countdownInterval);
                 console.log("Time's up!");
-                resetTimer();
                 next();
             }
         }, 1000);
@@ -39,13 +38,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     //Reset the 10 second timer for the next question 
     function resetTimer() {
-        clearInterval(countdownInterval);
-        countdownTimer.innerText = 10;
+        if (countdownInterval) {
+            clearInterval(countdownInterval);
+        }
     }
 
     function eraseCache() {
-        window.location = window.location.href+'?eraseCache=true';
-      }
+        window.location = window.location.href + '?eraseCache=true';
+    }
 
     //Loop through the options and add Click Event listener that calls optionSelected function
     for (var i = 0; i < option.length; i++) {
@@ -53,34 +53,39 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
 
-    //Funtion selects the asnwer, validates the asnwer and alerts the user if it is the correct one 
+    //Function validates the selected answer and alerts the user if it is the correct one or not
     function optionSelected(event) {
+        resetTimer();
         const clickedItem = event.target.innerText;
         const correctOption = questions[questionCount].correctAnswer;
         if (correctOption === clickedItem) {
-            console.log("Correct!");
+            console.log("Correct!"); //DELETE THAT BEFORE DEPLOYMENT
             score++;
+            //Call a function to make the container release a green beacon 
             alert('You answered Correctly! Score = ' + score + ' Click "Next"');
-            next();
+            //resetTimer();
         } else {
             // User's answer is incorrect
-            console.log("Incorrect!");
-            alert('You chose the wrong Asnwer! Click "Next"');
-            next();
+            console.log("Incorrect!"); //DELETE BEFORE DEPLOYMENT
+                        //Call a function to make the container release a green beacon 
+            alert('You chose the wrong Answer!');
+            //resetTimer();
         }
-        if (questionNum >= "5") {
-            qanda.classList.add("hide");
-            input.classList.remove("hide");
-            alert("Thank you for playing! You scored " +score+" out of 5!");
-            eraseCache()
-        }
+        next();
     }
 
     //When the "Next" button is clicked the questionCount(index) is incremented with the ++ operator, presenting the next question
     function next() {
         questionCount++;
         questionNum++;
-        showQuestion(questionCount);
+        if (questionNum >= 5) {
+            qanda.classList.add("hide");
+            input.classList.remove("hide");
+            alert("You scored " + score + " out of 5! Thank you for playing!");
+            eraseCache();
+        } else {
+            showQuestion(questionCount);
+        }
     }
 
     //Display question and asnwer options and calls the timer() function
@@ -98,22 +103,31 @@ document.addEventListener("DOMContentLoaded", (event) => {
         answerA.innerHTML = optionTag1;
         answerB.innerHTML = optionTag2;
         answerC.innerHTML = optionTag3;
+
+        // Re-attach event listeners to new option elements
+        document.getElementById("optionA").addEventListener("click", optionSelected);
+        document.getElementById("optionB").addEventListener("click", optionSelected);
+        document.getElementById("optionC").addEventListener("click", optionSelected);
     }
 
     //Start game function validates if inputs Name and Age are provided and calls the showQuestion() function
     function startGame() {
         let userName = document.getElementById("name").value;
         let userAge = document.getElementById("age").value;
-        if (!userName && !userAge) {
+        if (!userAge) {
+            alert("Please enter your Age.");
+            return;
+        } else if (!userName) {
+            alert("Please enter your Name.");
+            return;
+        } else if (!userName || !userAge) {
             alert("Please enter your Name and Age.");
             return;
         } else if (userName && userAge) {
-            console.log("Name:", userName);
-            console.log("Age:", userAge);
+            questionCount = 0;
+            questionNum = 0;
+            score = 0;
+            showQuestion(0);
         };
-        questionCount = 0;
-        score = 0;
-        showQuestion(0);
-        return;
     };
 });
