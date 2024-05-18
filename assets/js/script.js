@@ -63,18 +63,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
             score++;
             //Call a function to make the container release a green beacon 
             alert('You answered Correctly! Score = ' + score + ' Click "Next"');
-            //resetTimer();
         } else {
             // User's answer is incorrect
             console.log("Incorrect!"); //DELETE BEFORE DEPLOYMENT
                         //Call a function to make the container release a green beacon 
             alert('You chose the wrong Answer!');
-            //resetTimer();
         }
         next();
     }
 
     //When the "Next" button is clicked the questionCount(index) is incremented with the ++ operator, presenting the next question
+    //If the questionNum reaches 5, the game will be over and the score will be displayed
+    //
     function next() {
         questionCount++;
         questionNum++;
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
     }
 
-    //Display question and asnwer options and calls the timer() function
+    //Display question and answer options and calls the timer() function
     function showQuestion(index) {
         qanda.classList.remove("hide");
         input.classList.add("hide");
@@ -110,9 +110,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
         document.getElementById("optionC").addEventListener("click", optionSelected);
     }
 
-    //Randomize the order of the questions 
+    //Randomize the order of the questions using Fisher-Yates Shuffle Algorithm
     function randomizeQuestions(array) {
-        for (let i = array.lenght -1; i > 0; i--) {
+        for (let i = array.length -1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]]
         }
