@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     startButton.addEventListener("click", startGame);
     const nextButton = document.getElementById("next");
     nextButton.addEventListener("click", next);
-    const option = document.getElementsByClassName("btn");
+    const option = document.getElementsByClassName("option");
     const answerA = document.getElementById("optionA");
     const answerB = document.getElementById("optionB");
     const answerC = document.getElementById("optionC");
@@ -96,9 +96,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
         timer();
 
         questionp.textContent = `${questions[index].question}`;
-        let optionTag1 = `<span id="optionA" class="btn optionA">${questions[index].options.optionA}</span>`;
-        let optionTag2 = `<span id="optionB" class="btn optionB">${questions[index].options.optionB}</span>`;
-        let optionTag3 = `<span id="optionC" class="btn optionC">${questions[index].options.optionC}</span>`;
+        let optionTag1 = `<span id="optionA" class="option optionA">${questions[index].options.optionA}</span>`;
+        let optionTag2 = `<span id="optionB" class="option optionB">${questions[index].options.optionB}</span>`;
+        let optionTag3 = `<span id="optionC" class="option optionC">${questions[index].options.optionC}</span>`;
 
         answerA.innerHTML = optionTag1;
         answerB.innerHTML = optionTag2;
