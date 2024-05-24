@@ -44,8 +44,8 @@ li {
 }
 
 #exit {
-   font-weight: 100;
-   font-size: 12px;
+    font-weight: 100;
+    font-size: 12px;
 }
 
 .logo {
@@ -55,6 +55,7 @@ li {
     text-transform: uppercase;
     letter-spacing: 6.5px;
     background: transparent;
+    left: 2.7%;
 }
 
 .logo:hover {
@@ -123,7 +124,10 @@ img {
     text-align: center;
 }
 
-::placeholder, input:-internal-autofill-selected, input:focus-visible, input:-internal-autofill-previewed {
+::placeholder,
+input:-internal-autofill-selected,
+input:focus-visible,
+input:-internal-autofill-previewed {
     font-family: "mono45-headline", monospace;
     font-weight: 100;
     background-color: #474747 !important;
@@ -204,7 +208,10 @@ label {
     padding: 1%;
     background: transparent;
     position: relative;
-    bottom: 45px;
+    bottom: 30px;
+    text-align: center;
+    word-wrap: break-word;
+    width: 85%;
 }
 
 .option {
@@ -217,10 +224,12 @@ label {
 
 .option:hover {
     background: #6f6f6f;
+
     span[class="option"] {
         background: #6f6f6f;
     }
 }
+
 /* NOT WORKING */
 
 span[class="option"] {
@@ -240,55 +249,142 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
-/* @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 650px) {
 
-    header {
-        padding-top: 0;
+    body {
+        height: 100vh;
+        width: 100vw;
+        justify-content: flex-start;
+        height: 100vh;
     }
-
-    nav>ul {
-        display: flex;
-        align-items: baseline;
-        flex-direction: column;
-    }
-
     .logo {
-        padding-top: 28px;
-    }
-}
-
-@media only screen and (max-width: 425px) {
-    header {
-        position: absolute;
-        padding-top: 0;
-        width: 425px;
-        left: 15%;
-
-    }
-
-    #countdown-timer {
-        bottom: 83px;
-        left: 180px;
-    }
-
-    nav>ul {
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
+        left: 3.9%;
     }
 
     .circle {
-        height: 562px;
-        width: 562px;
-        top: 65%;
-        left: 66.5%;
+        height: 500px;
+        width: 500px;
+        margin-top: 30px;
     }
 
-    #exit {
-        position: relative;
-        bottom: 0;
-        left: 0;
+    #countdown-timer {
+        bottom: 55px;
+        left: 195px;
     }
-} */
+
+    #questionp {
+        font-size: 15px;
+        word-wrap: break-word;
+        width: 80%;
+        text-align: center;
+        bottom: 25px;
+    }
+
+    .option {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    body {
+        font-size: small;
+    }
+
+    .circle {
+        height: 400px;
+        width: 400px;
+        margin-top: 20px;
+    }
+
+    label {
+        margin-bottom: 0;
+    }
+
+    #start {
+        margin: 0;
+        font-size: 18px;
+    }
+    #countdown-timer {
+        bottom: 21px;
+        left: 161px;
+    }
+
+    #questionp {
+        bottom: 15px;
+        font-weight: 500;
+    }
+
+    .option {
+        margin: 5px;
+    }
+
+}
+
+@media only screen and (max-width: 425px) {
+    .circle {
+        margin-top: 5px;
+    }
+
+    .logo {
+        left: 5.9%;
+    }
+
+    #countdown-timer {
+        font-size: 35px;
+        bottom: 40px;
+        left: 120px;
+
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    body {
+        font-size: 16px;
+    }
+
+    .logo {
+
+    }
+
+    .circle {
+        height: 300px;
+        width: 300px;
+        margin-top: 0;
+        font-size: smaller;
+    }
+
+    #countdown-timer {
+        font-size: 30px;
+        bottom: 0;
+        left: 122px;
+        height: 60px;
+        width: 60px;
+    }
+
+    #start {
+        height: 35px;
+        width: 180px;
+    }
+
+    input {
+        width: 70%;
+    }
+    ::placeholder {
+        font-size: 16px;
+    }
+
+    #questionp {
+        font-size: 12px;
+        bottom: 0;
+    }
+
+    #next {
+        width: 20%;
+        font-size: 12px;
+        margin-top: 0;
+    }
+
+    .option {
+        margin: 2px;
+    }
+}
