@@ -1,21 +1,25 @@
 import { questions } from "./questionscontent.js";
 
-document.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener("DOMContentLoaded", () => {
 
 
     //Assign const variable to main elements for future use
     const countdownTimer = document.getElementById("countdown-timer");
     const startButton = document.getElementById("start");
     startButton.addEventListener("click", startGame);
-    const nextButton = document.getElementById("next");
-    nextButton.addEventListener("click", next);
+    const nextButton1 = document.getElementById("next-correct",);
+    const nextButton2 = document.getElementById("next-wrong",);
+    nextButton1.addEventListener("click", next);
+    nextButton2.addEventListener("click", next);
     const option = document.getElementsByClassName("option");
     const answerA = document.getElementById("optionA");
     const answerB = document.getElementById("optionB");
     const answerC = document.getElementById("optionC");
     const questionp = document.getElementById("questionp");
+    const closeRestart = document.getElementById("close-restart");
+    closeRestart.addEventListener("click", eraseCache);
 
-    let questionCount = 0;
+    let questionCount;
     let questionNum = 0;
     let score = 0;
     let countdownInterval;
@@ -52,6 +56,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
         option[i].addEventListener("click", optionSelected);
     }
 
+    //Functions to change the content of the End-game Modal
+    function endGame () {
+        $("moday-body-endgame").html("<p>You got " + score + " out of 5 questions correct!</p>");
+    }
 
     //Function validates the selected answer and alerts the user if it is the correct one or not
     function optionSelected(event) {
@@ -62,14 +70,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
             console.log("Correct!"); //DELETE THAT BEFORE DEPLOYMENT
             score++;
             //Call a function to make the container release a green beacon 
-            alert('You answered Correctly! Score = ' + score + ' Click "Next"');
+            $("#answered-correctly-modal").modal("show");
         } else {
             // User's answer is incorrect
             console.log("Incorrect!"); //DELETE BEFORE DEPLOYMENT
                         //Call a function to make the container release a green beacon 
-            alert('You chose the wrong Answer!');
+            $("#answered-wrong-modal").modal("show");
         }
-        next();
     }
 
     //When the "Next" button is clicked the questionCount(index) is incremented with the ++ operator, presenting the next question
@@ -79,10 +86,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
         questionCount++;
         questionNum++;
         if (questionNum >= 5) {
+            $("#end-game-modal").modal("show");
+            $("#modal-body-endgame").append("<p>You got " + score + " out of 5 questions correct!</p>");
             qanda.classList.add("hide");
             input.classList.remove("hide");
-            alert("You scored " + score + " out of 5! Thank you for playing!");
-            eraseCache();
         } else {
             showQuestion(questionCount);
         }

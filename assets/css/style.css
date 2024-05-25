@@ -249,6 +249,57 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
+/* Modal styling  */
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: #6f6e6e;
+}
+
+.modal-body {
+    align-self: center;
+}
+
+.modal-footer {
+    justify-content: center;
+    border-top: 0;
+    width: 50%;
+    height: 50px;
+    padding: 5px;
+}
+
+button[class="next"], button[id="close-restart"] {
+    width: 100%;
+    height: 40px;
+}
+
+button[id="close-restart"] {
+    border: #313131 solid 2px;
+    border-radius: 16px;
+}
+
+h5.modal-title {
+    padding-bottom: 20px;
+}
+
+::host {
+    width: 100px;
+    height: 100px;
+}
+
+#icon, svg, box-item {
+    width: 50px;
+    height: 50px;
+}
+
+.bx-fade-up {
+    animation: fade-up 2.5s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    animation-iteration-count: 1;
+}
+
 @media only screen and (max-width: 650px) {
 
     body {
@@ -257,6 +308,7 @@ input[type=number] {
         justify-content: flex-start;
         height: 100vh;
     }
+
     .logo {
         left: 3.9%;
     }
@@ -304,6 +356,7 @@ input[type=number] {
         margin: 0;
         font-size: 18px;
     }
+
     #countdown-timer {
         bottom: 21px;
         left: 161px;
@@ -342,9 +395,7 @@ input[type=number] {
         font-size: 16px;
     }
 
-    .logo {
-
-    }
+    .logo {}
 
     .circle {
         height: 300px;
@@ -369,6 +420,7 @@ input[type=number] {
     input {
         width: 70%;
     }
+
     ::placeholder {
         font-size: 16px;
     }
