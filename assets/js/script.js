@@ -18,6 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const questionp = document.getElementById("questionp");
     const closeRestart = document.getElementById("close-restart");
     closeRestart.addEventListener("click", eraseCache);
+    const modalCorrect = document.getElementById("answered-correctly-modal");
+    const modalWrong = document.getElementById("answered-wrong-modal");
+    const modalEndGame = document.getElementById("end-game-modal");
 
     let questionCount;
     let questionNum = 0;
@@ -56,12 +59,26 @@ document.addEventListener("DOMContentLoaded", () => {
         option[i].addEventListener("click", optionSelected);
     }
 
-    //Functions to change the content of the End-game Modal
-    function endGame () {
-        $("moday-body-endgame").html("<p>You got " + score + " out of 5 questions correct!</p>");
+    // function closeModal() {
+    //     modal.style.display = "none";
+    // }
+
+    function handleModalClick(event, modal, action) {
+        if (event.target === modal) {
+            action();
+            $(modal).modal("hide");
+        }
     }
 
+    window.addEventListener("click", function(event) {
+        handleModalClick(event, modalCorrect, next);
+        handleModalClick(event, modalWrong, next);
+        handleModalClick(event, modalEndGame, eraseCache);
+    });
+
+
     //Function validates the selected answer and alerts the user if it is the correct one or not
+  
     function optionSelected(event) {
         resetTimer();
         const clickedItem = event.target.innerText;
@@ -69,12 +86,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (correctOption === clickedItem) {
             console.log("Correct!"); //DELETE THAT BEFORE DEPLOYMENT
             score++;
-            //Call a function to make the container release a green beacon 
             $("#answered-correctly-modal").modal("show");
         } else {
             // User's answer is incorrect
             console.log("Incorrect!"); //DELETE BEFORE DEPLOYMENT
-                        //Call a function to make the container release a green beacon 
             $("#answered-wrong-modal").modal("show");
         }
     }
