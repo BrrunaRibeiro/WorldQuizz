@@ -77,8 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    //Function validates the selected answer and alerts the user if it is the correct one or not
-  
+    //Validates the selected answer and alerts the user if it is the correct one or not
     function optionSelected(event) {
         resetTimer();
         const clickedItem = event.target.innerText;
@@ -94,9 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    //When the "Next" button is clicked the questionCount(index) is incremented with the ++ operator, presenting the next question
-    //If the questionNum reaches 5, the game will be over and the score will be displayed
-    //
+    //The questionCount(index) is incremented with the ++ operator
+    //Presents the next question
+    //If the questionNum reaches 5, the game is over and the score is displayed
     function next() {
         questionCount++;
         questionNum++;
@@ -140,7 +139,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    //Start game function validates if inputs Name and Age are provided and calls the showQuestion() function
+    //Validates if inputs Name and Age are provided
+    //Calls functions to ramdomize the questions
+    //Calls the showQuestion() function
+    //Game starts
     function startGame() {
         let userName = document.getElementById("name").value;
         let userAge = document.getElementById("age").value;

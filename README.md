@@ -2,12 +2,13 @@
 
 [WorldQuizz](https://brrunaribeiro.github.io/project-2/)
 
-World Quizz was created with the intention to bring general knowledge about Travel, Geography and Local Curiosity. 
-You will find the questions not difficult to answer, it's probably things you already heard of back in school or while traveling yourself, otherwise, you just aggregated knowledge.
+World Quizz was created with the intention to bring general knowledge about Travel, Geography and Local Curiosities. 
+You will find the questions not difficult to answer, it's probably things you already heard of, back in school or while traveling yourself, and otherwise, you might have just aggregated some knowledge.
 
-You have one question, and three options for answer, from which only one is correct. A countdown timer is at the top-right corner, you have 10 seconds to answer the question.
-There are 5 questions in total. 
-An alert will display your score based on how many questions you answered correctly out of 5.
+For each question, there are three options for answer, from which, only ONE is correct. The game features a countdown timer which is at the top-right corner, you have 10 seconds to answer the question. When the timer runs out, you are redirected to the next question and your score remains the same.
+There are 5 questions in total. You score +1 for each correctly answered question.
+
+After 5 questions, you will see your final score.
 
 ![WorldQuizz](..\assets\images\project-screenshot1.webp)
 
@@ -24,8 +25,8 @@ __Navigation Bar__
 
 __User Inputs page__
 
-- The index page consists of a User Input, where the name and age will be validated prior to starting the game.
-- If both the name and age are provided, you can either start the quizz or see the tutorial with the instructions on how to play.
+- The landing page consists of a User Input, where the name and age will be validated prior to starting the game.
+- If both the name and age are provided, you can either start the quizz.
 
 ![UserInput](..\assets\images\project-screenshot2.webp)
 
@@ -37,10 +38,25 @@ __Start Button__
 __Question and Answers Section__
 
 - In this section, the question is presented with 3 options for answer. Only one of them is the correct answer.
+- You have 10 seconds to answer the question.
+- After selecting one answer, the answer will be instantly validated and the user is informed if it is correct or wrong.
+- Each option for answer has a :hover effect for better UX.
 
 __Timer__
 
-- A timer function has been added to give the User 10 second to select the correct answer. 
+- A timer function has been added to the game to make it more challenging. 
+- The timer has 10 seconds.
+- When the timer runs out, the user will automatically be presented the next question.
+
+__Modal instead of alerts__
+
+- In the latest deployment a Bootstrap Modal was introduced for better UI.
+- The modal is more appealing and can be easily styled.
+- Each time the answer is selected, a Modal will be shown to let the user know if the answer is correct or not. 
+- Each modal has an Icon with animation to enhance the game experience.
+- The modal can be closed by clicking next, or by clicking anywhere in the screen as long as the Modal is shown.
+- The in-between game Modal will redirect the user to the next question.
+- The "end of game" Modal shows the user the final score and prompts the user to start a new game.
 
 ![Question and Answer options with Timer](..\assets\images\project-screenshot3.webp)
 
@@ -50,14 +66,23 @@ __Timer__
 __Leader Board__
     
 - This feature will allow the User to see how friends and family scored and display a leader board depending on your scores.
+- Ability to compare each round played's score.
+
+__In-Game Score__
+
+- In-game score with bars that become green(in case correctly answered) or red(in case incorrectly answered).
+
+__Share Options__
 
 - Share button to let the user share their score with friends and family with invitation to play the quiz.
 
+
 ## Testing
 
-* W3C Validator - Passed
-* W3C CSS Validator - Passed
-* Wave - Passed
+* [JsLint](https://www.jslint.com/) - 
+* [W3C Validator]() - 
+* [W3C CSS Validator]() - 
+* [Wave]() - 
 
 ## Manual Testing
 
@@ -67,10 +92,10 @@ __Leader Board__
 
 ### Known Bugs
 
-- Timer is not working properly even with ClearTimerInterval being adjusted.
-
 ### Fixed bugs
 
+- Timer is not working properly even with ClearTimerInterval being adjusted. FIXED
+- The modal can be closed by clicking anywhere in the screen, however the game's logic stops and the game does not continues. FIXED.
 
 ## Credits
 
@@ -78,7 +103,9 @@ __Leader Board__
 
 [W3C](https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp) - Remove default appearance of the input field with "Number" type.
 
-[GeeksforGeeks](https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/) - Assisted to biuld the function to randomize the questions.
+[GeeksforGeeks](https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/) - Assisted to build the function to randomize the questions.
+
+[BoxIcons](https://boxicons.com/) - Icons for Modals
 
 ### Media
 
@@ -90,3 +117,4 @@ __Favicon__: [FavIcon Generator](https://favicon.io/)
 ### Acknowledgements
 
 - My Mentor - For all the support and knowledge shared throughout the development of this project.
+-My family and friends -  For assisting with the Manual Testing and providing helpful feedback.
