@@ -76,9 +76,13 @@ __Share Options__
 
 - Share button to let the user share their score with friends and family with invitation to play the quiz.
 
+__Tutorial__
+
+-Video with basic explanation of the game and how to play it.
 
 ## Testing
 
+* [JSHint](https://jshint.com/) - 
 * [JsLint](https://www.jslint.com/) - 
 * [W3C Validator]() - 
 * [W3C CSS Validator]() - 
