@@ -142,7 +142,7 @@ button {
     padding: 5px;
     margin: 10px;
     text-align: center;
-    color: #ffffff;
+    color: #c9c9c9;
     font-size: 17px;
     border: solid 1px rgb(172, 172, 172);
     line-height: 20px;
@@ -258,7 +258,16 @@ input[type=number] {
 .error-header {
     padding: 15px;
     font-weight: 500;
-    
+}
+
+p > a {
+    text-decoration: none;
+    color: #777777;
+}
+
+p > a:hover {
+    text-decoration: none;
+    color: #888888;
 }
 
 /* Modal styling  */
