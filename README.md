@@ -18,75 +18,75 @@ The Quizz was build to aggregate knowledge. You will find the questions easy to 
 
 ### Existing Features
 
-__Navigation Bar__
+- __Navigation Bar__
 
-- Responsive navigation bar featuring Logo with a link to the Home page and a link to "Exit" the game.
-- This section will allow the user to navigate through the Quiz easily.
+    - Responsive navigation bar featuring Logo with a link to the Home page and a link to "Exit" the game.
+    - This section will allow the user to navigate through the Quiz easily.
 
-__User Inputs page__
+- __User Inputs page__
 
-- The landing page consists of a User Input, where the name and age will be validated prior to starting the game.
-- If both the name and age are provided, you can either start the quizz.
+    - The landing page consists of a User Input, where the name and age will be validated prior to starting the game.
+    - If both the name and age are provided, you can either start the quizz.
 
-![UserInput](..\assets\images\project-screenshot2.webp)
+    ![UserInput](..\assets\images\project-screenshot2.webp)
 
-__Start Button__
+- __Start Button__
 
-- This button starts the Quiz after validating the User's Inputs. 
-- Featuring a :hover animation.
+    - This button starts the Quiz after validating the User's Inputs. 
+    - Featuring a :hover animation.
 
-__Question and Answers Section__
+- __Question and Answers Section__
 
-- In this section, the question is presented with 3 options for answer. Only one of them is the correct answer.
-- You have 10 seconds to answer the question.
-- After selecting one answer, the answer will be instantly validated and the user is informed if it is correct or wrong.
-- Each option for answer has a :hover effect for better UX.
+    - In this section, the question is presented with 3 options for answer. Only one of them is the correct answer.
+    - You have 10 seconds to answer the question.
+    - After selecting one answer, the answer will be instantly validated and the user is informed if it is correct or wrong.
+    - Each option for answer has a :hover effect for better UX.
 
-__Timer__
+- __Timer__
 
-- A timer function has been added to the game to make it more challenging. 
-- The timer has 10 seconds.
-- When the timer runs out, the user will automatically be presented the next question.
+    - A timer function has been added to the game to make it more challenging. 
+    - The timer has 10 seconds.
+    - When the timer runs out, the user will automatically be presented the next question.
 
-__Modal instead of alerts__
+- __Modal instead of alerts__
 
-- In the latest deployment a Bootstrap Modal was introduced for better UI.
-- The modal is more appealing and can be easily styled.
-- Each time the answer is selected, a Modal will be shown to let the user know if the answer is correct or not. 
-- Each modal has an Icon with animation to enhance the game experience.
-- The modal can be closed by clicking next, or by clicking anywhere in the screen as long as the Modal is shown.
-- The in-between game Modal will redirect the user to the next question.
-- The "end of game" Modal shows the user the final score and prompts the user to start a new game.
+    - In the latest deployment a Bootstrap Modal was introduced for better UI.
+    - The modal is more appealing and can be easily styled.
+    - Each time the answer is selected, a Modal will be shown to let the user know if the answer is correct or not. 
+    - Each modal has an Icon with animation to enhance the game experience.
+    - The modal can be closed by clicking next, or by clicking anywhere in the screen as long as the Modal is shown.
+    - The in-between game Modal will redirect the user to the next question.
+    - The "end of game" Modal shows the user the final score and prompts the user to start a new game.
 
-![Question and Answer options with Timer](..\assets\images\project-screenshot3.webp)
+    ![Question and Answer options with Timer](..\assets\images\project-screenshot3.webp)
 
 
 ### Features to be implemented
 
-__Leader Board__
+- __Leader Board__
     
-- This feature will allow the User to see how friends and family scored and display a leader board depending on your scores.
-- Ability to compare each round played's score.
+    - This feature will allow the User to see how friends and family scored and display a leader board depending on your scores.
+    - Ability to compare each round played's score.
 
-__In-Game Score__
+- __In-Game Score__
 
-- In-game score with bars that become green(in case correctly answered) or red(in case incorrectly answered).
+    - In-game score with bars that become green(in case correctly answered) or red(in case incorrectly answered).
 
-__Share Options__
+- __Share Options__
 
-- Share button to let the user share their score with friends and family with invitation to play the quiz.
+    - Share button to let the user share their score with friends and family with invitation to play the quiz.
 
-__Tutorial__
+- __Tutorial__
 
--Video with basic explanation of the game and how to play it.
+    - Video with basic explanation of the game and how to play it.
 
 ## Testing
 
-* [JSHint](https://jshint.com/) - 
-* [JsLint](https://www.jslint.com/) - 
-* [W3C Validator]() - 
-* [W3C CSS Validator]() - 
-* [Wave]() - 
+- [JSHint](https://jshint.com/) - 
+- [JsLint](https://www.jslint.com/) - 
+- [W3C Validator]() - 
+- [W3C CSS Validator]() - 
+- [Wave]() - 
 
 ## Manual Testing
 
@@ -95,15 +95,16 @@ __Tutorial__
 
 Github Pages was used to deploy the live website. The instructions to achieve this are below:
 
-* Log in (or sign up) to Github.
-* Click on the Settings link.
-* Click on the Pages link in the left hand side navigation bar.
-* In the Source section, choose main from the drop down select branch menu. Select Root from the drop down select folder menu.
-* Click Save. Your live Github Pages site is now deployed at the URL shown.
+- Log in (or sign up) to Github.
+- Click on the Settings link.
+- Click on the Pages link in the left hand side navigation bar.
+- In the Source section, choose main from the drop down select branch menu. Select Root from the drop down select folder menu.
+- Click Save. Your live Github Pages site is now deployed at the URL shown.
 
 ## Bugs
 
 ### Known Bugs
+- No known bugs.
 
 ### Fixed bugs
 
@@ -112,22 +113,23 @@ Github Pages was used to deploy the live website. The instructions to achieve th
 
 ## Credits
 
-[Uiverse](https://uiverse.io/) - Start Button.
+- [Uiverse](https://uiverse.io/) - Start Button.
 
-[W3C](https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp) - Remove default appearance of the input field with "Number" type.
+- [W3C](https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp) - Remove default appearance of the input field with "Number" type.
 
-[GeeksforGeeks](https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/) - Assisted to build the function to randomize the questions.
+- [GeeksforGeeks](https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/) - Assisted to build the function to randomize the questions.
 
-[BoxIcons](https://boxicons.com/) - Icons for Modals
+- [BoxIcons](https://boxicons.com/) - Icons for Modals.
 
 ### Media
 
-__WireFrames__: [MarvelApp](https://marvelapp.com/prototype/bj49j2h)
+- [MarvelApp](https://marvelapp.com/prototype/bj49j2h) - Start Button.
 
-__Favicon__: [FavIcon Generator](https://favicon.io/)
+- [FavIcon Generator](https://favicon.io/) - FavIcon.
 
 
 ### Acknowledgements
 
 - My Mentor - For all the support and knowledge shared throughout the development of this project.
--My family and friends -  For assisting with the Manual Testing and providing helpful feedback.
+
+- My family and friends -  For assisting with the Manual Testing and providing helpful feedback.
