@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
             countdownTimer.innerText = count;
             if (count === 0) {
                 clearInterval(countdownInterval);
-                console.log("Time's up!");
                 next();
             }
         }, 1000);
@@ -83,12 +82,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const clickedItem = event.target.innerText;
         const correctOption = questions[questionCount].correctAnswer;
         if (correctOption === clickedItem) {
-            console.log("Correct!"); //DELETE THAT BEFORE DEPLOYMENT
             score++;
             $("#answered-correctly-modal").modal("show");
         } else {
-            // User's answer is incorrect
-            console.log("Incorrect!"); //DELETE BEFORE DEPLOYMENT
             $("#answered-wrong-modal").modal("show");
         }
     }
