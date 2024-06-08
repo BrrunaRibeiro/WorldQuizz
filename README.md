@@ -11,8 +11,8 @@ There are 5 questions in total. You score +1 for each correctly answered questio
 
 After 5 questions, you will see your final score.
 
-![LandingPage](assets\images\landingpage.webp)
-![Screenshot](assets\images\maingame.webp)
+![LandingPage](assets/images/landingpage.webp)
+![Screenshot](assets/images/maingame.webp)
 
 ## Features
 
