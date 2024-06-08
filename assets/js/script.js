@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const countdownTimer = document.getElementById("countdown-timer");
     const startButton = document.getElementById("start");
     startButton.addEventListener("click", startGame);
-    const nextButton1 = document.getElementById("next-correct",);
-    const nextButton2 = document.getElementById("next-wrong",);
+    const nextButton1 = document.getElementById("next-correct");
+    const nextButton2 = document.getElementById("next-wrong");
     nextButton1.addEventListener("click", next);
     nextButton2.addEventListener("click", next);
     const option = document.getElementsByClassName("option");
@@ -131,12 +131,12 @@ document.addEventListener("DOMContentLoaded", () => {
     function randomizeQuestions(array) {
         for (let i = array.length -1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]]
+            [array[i], array[j]] = [array[j], array[i]];
         }
     }
 
     //Validates if inputs Name and Age are provided
-    //Calls functions to ramdomize the questions
+    //Calls functions to randomize the questions
     //Calls the showQuestion() function
     //Game starts
     function startGame() {
@@ -157,6 +157,6 @@ document.addEventListener("DOMContentLoaded", () => {
             score = 0;
             randomizeQuestions(questions);
             showQuestion(0);
-        };
-    };
+        }
+    }
 });
