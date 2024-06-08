@@ -94,7 +94,6 @@ The Quizz was build to aggregate knowledge. You will find the questions easy to 
 |----------------------------------------|------------------------------------------------------------------------|----------------------------------------------------------|---------------|
 | **Initial Form (User Input)**          |
 | Input Fields Validation                |
-| - Empty Name and Age                   | Leave Name and Age fields empty, click "Start"                         | Error message for required fields                        | Passed        |
 | - Empty Age                            | Enter valid name, leave Age empty, click "Start"                       | Error message for Age field                              | Passed        |
 | - Empty Name                           | Enter valid age, leave Name empty, click "Start"                       | Error message for Name field                             | Passed        |
 | - Invalid Data Types                   | Enter text in Age field                                                | Only numbers are allowed                                 | Passed        |

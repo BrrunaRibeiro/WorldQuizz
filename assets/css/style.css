@@ -17,6 +17,8 @@ body {
     flex-wrap: nowrap;
     background: #474747;
     overflow: hidden;
+    height: auto;
+    width: 100vw;
 }
 
 nav,
@@ -30,6 +32,7 @@ nav>ul {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    margin-bottom: 0;
 }
 
 li {
