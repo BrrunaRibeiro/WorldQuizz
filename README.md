@@ -80,17 +80,17 @@ The Quizz was build to aggregate knowledge. You will find the questions easy to 
 ## Testing
 
 - [JSHint](https://jshint.com/) - Passed.
-    ![JsHintPassed](assets\images\jshintpassed.webp)
+    ![JsHintPassed](assets/images/jshintpassed.webp)
 
 - [W3C Validator](https://validator.w3.org/) - Passed.
-    ![W3C HTML Passed](assets\images\w3chtmlpassed.webp)
+    ![W3C HTML Passed](assets/images/w3chtmlpassed.webp)
 
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - Passed.
-    ![W3C CSS Passed](assets\images\cssjigsawpassed.webp)
+    ![W3C CSS Passed](assets/images/cssjigsawpassed.webp)
 
 - [Wave](https://wave.webaim.org/) - Passed.
 
-    ![Wave Passed](assets\images\wavepassed.webp)
+    ![Wave Passed](assets/images/wavepassed.webp)
 
 
 ## Manual Testing
@@ -131,11 +131,11 @@ This Manual test indicates that all the tests have passed.
 
 - Responsiveness was checked and adjusted with Chrome Developers Tools
 
-![ResponsiveScreenShot](assets\images\responsivetest1.webp)
-![ResponsiveScreenShot](assets\images\responsivetest2.webp)
-![ResponsiveScreenShot](assets\images\responsivetest3.webp)
-![ResponsiveScreenShot](assets\images\responsivetest4.webp)
-![ResponsiveScreenShot](assets\images\responsivetest5.webp)
+![ResponsiveScreenShot](assets/images/responsivetest1.webp)
+![ResponsiveScreenShot](assets/images/responsivetest2.webp)
+![ResponsiveScreenShot](assets/images/responsivetest3.webp)
+![ResponsiveScreenShot](assets/images/responsivetest4.webp)
+![ResponsiveScreenShot](assets/images/responsivetest5.webp)
 
 ## Deployment
 
