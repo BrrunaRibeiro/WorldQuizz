@@ -90,6 +90,38 @@ The Quizz was build to aggregate knowledge. You will find the questions easy to 
 
 ## Manual Testing
 
+| Test Case                              | Steps                                                                  | Expected Result                                          | Passed/Failed |
+|----------------------------------------|------------------------------------------------------------------------|----------------------------------------------------------|---------------|
+| **Initial Form (User Input)**          |
+| Input Fields Validation                |
+| - Empty Name and Age                   | Leave Name and Age fields empty, click "Start"                         | Error message for required fields                        | Passed        |
+| - Empty Age                            | Enter valid name, leave Age empty, click "Start"                       | Error message for Age field                              | Passed        |
+| - Empty Name                           | Enter valid age, leave Name empty, click "Start"                       | Error message for Name field                             | Passed        |
+| - Invalid Data Types                   | Enter text in Age field                                                | Only numbers are allowed                                 | Passed        |
+| Accept Valid Inputs                    | Enter valid name and age, click "Start"                                | Form hides and quiz section appears                      | Passed        |
+| **Question and Answers**       |
+| Question Display                       | Ensure a question appears when quiz section is revealed                | Question displays                                        | Passed        |
+| Button Click Events                    | Click each option button (A, B, C)                                     | Correct/Wrong modal appears based on selection           | Passed        |
+| - Aria-label Check                     | Verify aria-label text for each button(A, B or C)                      | Aria-labels are present                                  | Passed        |
+| **Modals** |
+| Correct Answer Modal                   | Answer question correctly, correct modal displays                      | "Your answer is correct" modal appears                   | Passed        |
+| - Correct Modal Animation              | Verify animation on icon                                               | Icon animates                                            | Passed        |
+| - Next Question                        | Click "Next Question"                                                  | Modal closes and next question appears                   | Passed        |
+| Wrong Answer Modal                     | Answer question incorrectly, ensure wrong modal displays               | "Your answer is wrong" modal appears                     | Passed        |
+| - Wrong Modal Animation                | Verify animation on icon                                               | Icon animates                                            | Passed        |
+| - Next Question                        | Click "Next Question"                                                  | Modal closes and next question appears                   | Passed        |
+| **End Game Modal**                     |
+| End of Quiz                            | Complete quiz and ensure end game modal appears                        | "Thank you for playing" modal appears                    | Passed        |
+| Start a New Game                       | Click "Start a New Game"                                               | Restarts the game and initial input form appears         | Passed        |
+| **Additional Tests**                   |
+| Modal Transitions                      | Check modal transitions when closing one and opening another           | Transition present                                       | Passed        |
+| Responsive Design                      | Test on different device sizes (mobile, tablet, desktop)               | Layout is responsive and user-friendly                   | Passed        |
+| Click Outside the Modal                |
+| - Correct Answer Modal                 | Click outside the "Correct Answer" modal                               | Modal closes as expected                                 | Passed        |
+| - Wrong Answer Modal                   | Click outside the "Wrong Answer" modal                                 | Modal closes as expected                                 | Passed        |
+| - End Game Modal                       | Click outside the "End Game" modal                                     | Modal closes as expected                                 | Passed        |
+
+This Manual test indicates that all the tests have passed.
 
 ## Deployment
 
