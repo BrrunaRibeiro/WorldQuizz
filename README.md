@@ -1,6 +1,7 @@
 # WorldQuizz
 
-[WorldQuizz](https://brrunaribeiro.github.io/project-2/)
+[WorldQuizz](https://brrunaribeiro.github.io/WorldQuizz/)
+
 
 World Quizz was created with the intention to bring general knowledge about Travel, Geography and Local Curiosities. 
 You will find the questions not difficult to answer, it's probably things you already heard of, back in school or while traveling yourself, and otherwise, you might have just aggregated some knowledge.
@@ -10,7 +11,8 @@ There are 5 questions in total. You score +1 for each correctly answered questio
 
 After 5 questions, you will see your final score.
 
-![WorldQuizz](..\assets\images\project-screenshot1.webp)
+![LandingPage](assets\images\landingpage.webp)
+![Screenshot](assets\images\maingame.webp)
 
 ## Features
 
@@ -27,8 +29,6 @@ The Quizz was build to aggregate knowledge. You will find the questions easy to 
 
     - The landing page consists of a User Input, where the name and age will be validated prior to starting the game.
     - If both the name and age are provided, you can either start the quizz.
-
-    ![UserInput](..\assets\images\project-screenshot2.webp)
 
 - __Start Button__
 
@@ -58,9 +58,6 @@ The Quizz was build to aggregate knowledge. You will find the questions easy to 
     - The in-between game Modal will redirect the user to the next question.
     - The "end of game" Modal shows the user the final score and prompts the user to start a new game.
 
-    ![Question and Answer options with Timer](..\assets\images\project-screenshot3.webp)
-
-
 ### Features to be implemented
 
 - __Leader Board__
@@ -82,12 +79,20 @@ The Quizz was build to aggregate knowledge. You will find the questions easy to 
 
 ## Testing
 
-- [JSHint](https://jshint.com/) - 
-- [W3C Validator]() - 
+- [JSHint](https://jshint.com/) - Passed.
+    ![JsHintPassed](assets\images\jshintpassed.webp)
+
+- [W3C Validator](https://validator.w3.org/) - Passed.
+    ![W3C HTML Passed](assets\images\w3chtmlpassed.webp)
+
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - Passed.
-    ![]()
+    ![W3C CSS Passed](assets\images\cssjigsawpassed.webp)
+
 - [Wave](https://wave.webaim.org/) - Passed.
-    ![]()
+
+    ![Wave Passed](assets\images\wavepassed.webp)
+
+
 ## Manual Testing
 
 | Test Case                              | Steps                                                                  | Expected Result                                          | Passed/Failed |
@@ -121,6 +126,16 @@ The Quizz was build to aggregate knowledge. You will find the questions easy to 
 | - End Game Modal                       | Click outside the "End Game" modal                                     | Modal closes as expected                                 | Passed        |
 
 This Manual test indicates that all the tests have passed.
+
+## Responsiveness
+
+- Responsiveness was checked and adjusted with Chrome Developers Tools
+
+![ResponsiveScreenShot](assets\images\responsivetest1.webp)
+![ResponsiveScreenShot](assets\images\responsivetest2.webp)
+![ResponsiveScreenShot](assets\images\responsivetest3.webp)
+![ResponsiveScreenShot](assets\images\responsivetest4.webp)
+![ResponsiveScreenShot](assets\images\responsivetest5.webp)
 
 ## Deployment
 
