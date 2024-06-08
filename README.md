@@ -83,11 +83,11 @@ The Quizz was build to aggregate knowledge. You will find the questions easy to 
 ## Testing
 
 - [JSHint](https://jshint.com/) - 
-- [JsLint](https://www.jslint.com/) - 
 - [W3C Validator]() - 
-- [W3C CSS Validator]() - 
-- [Wave]() - 
-
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - Passed.
+    ![]()
+- [Wave](https://wave.webaim.org/) - Passed.
+    ![]()
 ## Manual Testing
 
 | Test Case                              | Steps                                                                  | Expected Result                                          | Passed/Failed |
