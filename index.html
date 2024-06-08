@@ -28,10 +28,10 @@
     <div id="input" class="circle">
         <form id="user-input">
             <label for="name">Enter your name</label>
-            <input id="name" type="text" placeholder="Name" autocomplete="off">
+            <input id="name" type="text" placeholder="Name" autocomplete="off" aria-labelledby="Enter your name">
             <br>
             <label for="name">Enter your age</label>
-            <input id="age" type="number" placeholder="Age">
+            <input id="age" type="number" placeholder="Age" aria-labelledby="Enter your age">
             <br>
             <br>
             <input id="start" type="button" value="Start">
@@ -64,7 +64,7 @@
                 <h5 class="modal-title">Your answer is wrong</h5>
                 </button>
                 <div class="modal-body">
-                    <box-icon name='x-circle' type='solid' animation='tada' color='#ff0000' ></box-icon>
+                    <box-icon name='x-circle' type='solid' animation='tada' color='#8d1616' ></box-icon>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn next" id="next-wrong" data-dismiss="modal">Next Question</button>
