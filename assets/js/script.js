@@ -50,7 +50,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function eraseCache() {
-        window.location = window.location.href + '?eraseCache=true';
+        // Append the eraseCache parameter to the URL
+        var url = new URL(window.location.href);
+        url.searchParams.set('eraseCache', 'true');
+        
+        // Reload the page with the new URL
+        window.location.href = url.toString();
+    }
+    
+    // Check if the URL contains the eraseCache parameter
+    if (window.location.search.includes('eraseCache=true')) {
+        // Clear the cache (implementation depends on what you mean by "cache")
+        // For example, you might want to clear localStorage or sessionStorage
+        // localStorage.clear();
+        // sessionStorage.clear();
+    
+        // Remove the eraseCache parameter from the URL
+        var url = new URL(window.location.href);
+        url.searchParams.delete('eraseCache');
+        window.history.replaceState({}, document.title, url.toString());
     }
 
     //Loop through the options and add Click Event listener that calls optionSelected function
